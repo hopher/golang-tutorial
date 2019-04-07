@@ -16,6 +16,7 @@ hugo new posts/201811/my-first-post/index.md
 ```
 |-- deploy.sh       # 发布静态网站
 |-- auto-commint.sh # 提交源文件 (排除docs目录)
+|-- run.sh          # 本地运行
 ```
 
 ## 参考资料
