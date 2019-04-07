@@ -1,7 +1,7 @@
 # hugo server --themesDir ... --baseURL=http://0.0.0.0:1313/example
 
 baseURL: https://hopher.github.io/golang-tutorial/
-title: Hugo Book
+title: Golang Tutorial
 theme: book
 disableKinds: ["taxonomy", "taxonomyTerm"]
 # themesDir: ../..
