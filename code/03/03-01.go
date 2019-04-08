@@ -2,9 +2,7 @@ package main
 
 import "fmt"
 
-func demo1() {
-	
-
+func main() {
 	// 1. 无初始化, 指定变量类型
 	var name string
 	var age int
