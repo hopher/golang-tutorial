@@ -6,8 +6,8 @@ headless: true
   - [简介]({{< relref "/docs/with-toc.md" >}})
 
 - **入门指南**
-  - [安装 && 配置]({{< relref "/docs/with-toc.md" >}})
-  - [Hello world]({{< relref "/docs/with-toc.md" >}})
+  - [安装 && 配置]({{< relref "/docs/01-xx.md" >}})
+  - [Hello world]({{< relref "/docs/02-xx.md" >}})
 
 - **基础知识**
   - [变量]({{< relref "/docs/with-toc.md" >}})
