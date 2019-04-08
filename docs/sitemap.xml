@@ -31,6 +31,10 @@
   </url>
   
   <url>
+    <loc>https://hopher.github.io/golang-tutorial/docs/with-toc/</loc>
+  </url>
+  
+  <url>
     <loc>https://hopher.github.io/golang-tutorial/docs/</loc>
     <priority>0</priority>
   </url>
