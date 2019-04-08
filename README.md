@@ -17,7 +17,10 @@ hugo new posts/201811/my-first-post/index.md
 |-- deploy.sh       # 发布静态网站
 |-- auto-commint.sh # 提交源文件 (排除docs目录)
 |-- run.sh          # 本地运行
-|-- config.yml      # 配置文件
+|-- config
+  |-- _default      # 默认配置
+  |-- _production   # 生产配置
+  |-- staging       # 开发配置
 ```
 
 ## LICENSE
