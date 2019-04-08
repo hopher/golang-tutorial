@@ -49,7 +49,8 @@ params:
   # - In blog posts
   BookDateFormat: "Jan 2, 2006"
 
-  Gitalk:
+  BookEnableGitalk: true
+  Gitalk: 
     clientID: 7dcb43fc92a2d46503f6
     clientSecret: e5bc998d14341e50ba879cf3af7a5c2133e787a9
     repo: golang-tutorial
