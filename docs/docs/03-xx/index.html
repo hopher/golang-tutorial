@@ -139,20 +139,20 @@ https://github.com/alex-shpak/hugo-book
 </div>
 
 
-      <div id="git-comments"></div>
-<link rel="stylesheet" href="https://jjeejj.github.io/css/gitment.css">
-<script src="https://jjeejj.github.io/js/gitment.js"></script>
+      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<div id="gitalk-container"></div>
 <script>
-  var gitment = new Gitment({
-    id: '',  
-    owner: 'hopher',
+  var gitalk = new Gitalk({
+    clientID: '7dcb43fc92a2d46503f6',
+    clientSecret: 'e5bc998d14341e50ba879cf3af7a5c2133e787a9',
     repo: 'golang-tutorial',
-    oauth: {
-      client_id: '7dcb43fc92a2d46503f6',
-      client_secret: 'e5bc998d14341e50ba879cf3af7a5c2133e787a9',
-    }
+    owner: 'hopher',
+    admin: ['hopher'],
+    id: location.pathname,      
+    distractionFreeMode: false  
   })
-  gitment.render('git-comments')
+  gitalk.render('gitalk-container')  
 </script>
     </div>
 
