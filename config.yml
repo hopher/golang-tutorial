@@ -54,6 +54,5 @@ params:
     clientSecret: e5bc998d14341e50ba879cf3af7a5c2133e787a9
     repo: golang-tutorial
     owner: hopher
-    admin: 
-      - hopher
+    admin: hopher
   
