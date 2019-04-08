@@ -3,7 +3,7 @@ headless: true
 ---
 
 - **序言**
-  - [简介]({{< relref "/docs/with-toc.md" >}})
+  - [简介]({{< relref "/docs/00-xx.md" >}})
 
 - **入门指南**
   - [安装 && 配置]({{< relref "/docs/01-xx.md" >}})
