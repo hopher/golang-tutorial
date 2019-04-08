@@ -2,7 +2,7 @@ package main
 
 import "fmt"
 
-func main() {
+func demo1() {
 	
 
 	// 1. 无初始化, 指定变量类型
