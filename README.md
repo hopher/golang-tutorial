@@ -19,6 +19,9 @@ hugo new posts/201811/my-first-post/index.md
 |-- run.sh          # 本地运行
 ```
 
+## LICENSE
+MIT
+
 ## 参考资料
 - [Github部署说明](https://gohugo.io/hosting-and-deployment/hosting-on-github/)
 - [搜索说明](https://gohugo.io/tools/search/)
