@@ -30,3 +30,6 @@ headless: true
 - **程序性能分析**
   - [CPU && 内存]({{< relref "/docs/15-xx.md" >}})
 
+- **附录**
+  - [Printf方法详解]({{< relref "/docs/A1/A01-xx.md" >}})
+
