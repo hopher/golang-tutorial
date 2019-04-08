@@ -142,6 +142,21 @@ func main() {
 </div>
 
 
+      <div id="git-comments"></div>
+<link rel="stylesheet" href="https://imsun.github.io/gitment/style/default.css">
+<script src="https://imsun.github.io/gitment/dist/gitment.browser.js"></script>
+<script>
+  var gitment = new Gitment({
+    id: '',  
+    owner: 'hopher',
+    repo: 'golang-tutorial',
+    oauth: {
+      client_id: '7dcb43fc92a2d46503f6',
+      client_secret: '3652f77ecb38eae73808102b54e25a9b0ddcb480',
+    }
+  })
+  gitment.render('git-comments')
+</script>
     </div>
 
     
@@ -160,10 +175,15 @@ func main() {
 
 
 
+
+ 
   </main>
 
   
   
+
+
+
 </body>
 
 </html>
