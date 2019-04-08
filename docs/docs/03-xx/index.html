@@ -121,18 +121,47 @@ https://github.com/alex-shpak/hugo-book
 <h2 id="3种变量声明方式">3种变量声明方式</h2>
 
 <ol>
-<li>xxx</li>
-<li>xx</li>
-<li>xxx</li>
+<li>无初始化, 指定变量类型</li>
+<li><code>var</code> 类型推断</li>
+<li>短变量声明 <code>:=</code></li>
 </ol>
 
-<h2 id="printf方法详解">Printf方法详解</h2>
+<h2 id="示例">示例</h2>
+
+<pre><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+	
+
+	// 1. 无初始化, 指定变量类型
+	var name string
+	var age int
+	fmt.Printf(&quot;%q %d\n&quot;, name, age)
+	// 输出结果
+	// &quot;&quot; 0
+
+	// 2. var 类型推断
+	var name2 = &quot;gopher2&quot;
+	fmt.Printf(&quot;%s\n&quot;, name2)
+	// 输出结果
+	// gopher2
+
+	// 3. 短变量声明 :=
+	name3 := &quot;gopher3&quot;
+	fmt.Printf(&quot;%s\n&quot;, name3)
+	// 输出结果
+	// gopher3
+}
+
+</code></pre>
 </article>
 
       
 <div class="align-center book-git-footer justify-between">
   
-  <div><a href="https://github.com/hopher/golang-tutorial/commit/f5e839004073a4d2478a09f4721ad11a26a3f81b" title='Last modified Apr 8, 2019 by hopher' target="_blank" rel="noopener">
+  <div><a href="https://github.com/hopher/golang-tutorial/commit/214bda66a545e38fef9e232e7a688c88d07ced82" title='Last modified Apr 8, 2019 by hopher' target="_blank" rel="noopener">
       <img src="/golang-tutorial/svg/code-merge.svg" /> Apr 8, 2019
     </a>
   </div>
@@ -173,7 +202,7 @@ https://github.com/alex-shpak/hugo-book
 <li>
 <ul>
 <li><a href="#3种变量声明方式">3种变量声明方式</a></li>
-<li><a href="#printf方法详解">Printf方法详解</a></li>
+<li><a href="#示例">示例</a></li>
 </ul></li>
 </ul>
 </nav>
