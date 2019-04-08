@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>03 Xx | Golang Tutorial</title>
+<title>A01 Xx | Golang Tutorial</title>
 
 <link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
 <link rel="stylesheet" href="/golang-tutorial/normalize.min.css">
@@ -34,7 +34,7 @@ https://github.com/alex-shpak/hugo-book
   
 
   <style>
-  nav ul a[href$="\2fgolang-tutorial\2f docs\2f 03-xx\2f "] {
+  nav ul a[href$="\2fgolang-tutorial\2f docs\2f A1\2f A01-xx\2f "] {
       color: #004ed0;
   }
   </style><ul>
@@ -112,21 +112,111 @@ https://github.com/alex-shpak/hugo-book
   <label for="menu-control">
     <img src="/golang-tutorial/svg/menu.svg" />
   </label>
-  <strong>03 Xx</strong>
+  <strong>A01 Xx</strong>
 </header>
 
       
 <article class="markdown">
 
-<h2 id="3种变量声明方式">3种变量声明方式</h2>
+<h1 id="go语言fmt包printf方法详解">Go语言fmt包Printf方法详解</h1>
 
-<ol>
-<li>xxx</li>
-<li>xx</li>
-<li>xxx</li>
-</ol>
+<h2 id="general">General</h2>
 
-<h2 id="printf方法详解">Printf方法详解</h2>
+<ul>
+<li><code>%v</code> 以默认的方式打印变量的值</li>
+<li><code>%T</code> 打印变量的类型</li>
+</ul>
+
+<h2 id="integer">Integer</h2>
+
+<ul>
+<li><code>%+d</code> 带符号的整型，<code>fmt.Printf(&quot;%+d&quot;, 255)</code>输出<code>+255</code></li>
+<li><code>%q</code> 打印单引号</li>
+<li><code>%o</code> 不带零的八进制</li>
+<li><code>%#o</code> 带零的八进制</li>
+<li><code>%x</code> 小写的十六进制</li>
+<li><code>%X</code> 大写的十六进制</li>
+<li><code>%#x</code> 带0x的十六进制</li>
+<li><code>%U</code> 打印Unicode字符</li>
+<li><code>%#U</code> 打印带字符的Unicode</li>
+<li><code>%b</code> 打印整型的二进制</li>
+</ul>
+
+<h2 id="integer-width">Integer width</h2>
+
+<ul>
+<li><p><code>%5d</code> 表示该整型最大长度是5，下面这段代码</p>
+
+<pre><code>fmt.Printf(&quot;|%5d|&quot;, 1)
+fmt.Printf(&quot;|%5d|&quot;, 1234567)
+</code></pre></li>
+</ul>
+
+<p>输出结果如下：</p>
+
+<pre><code>|    1|
+|1234567|   
+</code></pre>
+
+<ul>
+<li><code>%-5d</code>则相反，打印结果会自动左对齐</li>
+<li><code>%05d</code>会在数字前面补零。</li>
+</ul>
+
+<h2 id="float">Float</h2>
+
+<ul>
+<li><code>%f</code> (=<code>%.6f</code>) 6位小数点</li>
+<li><code>%e</code> (=<code>%.6e</code>) 6位小数点（科学计数法）</li>
+<li><code>%g</code> 用最少的数字来表示</li>
+<li><code>%.3g</code> 最多3位<strong>数字</strong>来表示</li>
+<li><code>%.3f</code> 最多3位<strong>小数</strong>来表示</li>
+</ul>
+
+<h2 id="string">String</h2>
+
+<ul>
+<li><code>%s</code> 正常输出字符串</li>
+<li><code>%q</code> 字符串带双引号，字符串中的引号带转义符</li>
+<li><code>%#q</code> 字符串带反引号，如果字符串内有反引号，就用双引号代替</li>
+<li><code>%x</code> 将字符串转换为小写的16进制格式</li>
+<li><code>%X</code> 将字符串转换为大写的16进制格式</li>
+<li><code>% x</code> 带空格的16进制格式</li>
+</ul>
+
+<h2 id="string-width-以5做例子">String Width (以5做例子）</h2>
+
+<ul>
+<li><code>%5s</code> 最小宽度为5</li>
+<li><code>%-5s</code> 最小宽度为5（左对齐）</li>
+<li><code>%.5s</code> 最大宽度为5</li>
+<li><code>%5.7s</code> 最小宽度为5，最大宽度为7</li>
+<li><code>%-5.7s</code> 最小宽度为5，最大宽度为7（左对齐）</li>
+<li><code>%5.3s</code> 如果宽度大于3，则截断</li>
+<li><code>%05s</code> 如果宽度小于5，就会在字符串前面补零</li>
+</ul>
+
+<h2 id="struct">Struct</h2>
+
+<ul>
+<li><code>%v</code> 正常打印。比如：<code>{sam {12345 67890}}</code></li>
+<li><code>%+v</code> 带字段名称。比如：<code>{name:sam phone:{mobile:12345 office:67890}</code></li>
+<li><code>%#v</code> 用Go的语法打印。
+比如<code>main.People{name:”sam”, phone:main.Phone{mobile:”12345”, office:”67890”}}</code></li>
+</ul>
+
+<h2 id="boolean">Boolean</h2>
+
+<ul>
+<li><code>%t</code> 打印true或false</li>
+</ul>
+
+<h2 id="pointer">Pointer</h2>
+
+<ul>
+<li><code>%p</code> 带0x的指针</li>
+<li><code>%#p</code> 不带0x的指针</li>
+</ul>
 </article>
 
       
@@ -139,7 +229,7 @@ https://github.com/alex-shpak/hugo-book
   
   
   <div>
-    <a href="https://github.com/hopher/golang-tutorial/edit/master/content/docs/03-xx.md" target="_blank" rel="noopener">
+    <a href="https://github.com/hopher/golang-tutorial/edit/master/content/docs/A1/A01-xx.md" target="_blank" rel="noopener">
       <img src="/golang-tutorial/svg/code-fork.svg" /> Edit this page
     </a>
   </div>
@@ -170,10 +260,17 @@ https://github.com/alex-shpak/hugo-book
   <aside class="book-toc fixed">
     <nav id="TableOfContents">
 <ul>
-<li>
+<li><a href="#go语言fmt包printf方法详解">Go语言fmt包Printf方法详解</a>
 <ul>
-<li><a href="#3种变量声明方式">3种变量声明方式</a></li>
-<li><a href="#printf方法详解">Printf方法详解</a></li>
+<li><a href="#general">General</a></li>
+<li><a href="#integer">Integer</a></li>
+<li><a href="#integer-width">Integer width</a></li>
+<li><a href="#float">Float</a></li>
+<li><a href="#string">String</a></li>
+<li><a href="#string-width-以5做例子">String Width (以5做例子）</a></li>
+<li><a href="#struct">Struct</a></li>
+<li><a href="#boolean">Boolean</a></li>
+<li><a href="#pointer">Pointer</a></li>
 </ul></li>
 </ul>
 </nav>
