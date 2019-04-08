@@ -24,3 +24,4 @@ hugo new posts/201811/my-first-post/index.md
 - [搜索说明](https://gohugo.io/tools/search/)
 - [多语言支持说明](https://gohugo.io/content-management/multilingual/)
 - [hugo-book 主题](https://github.com/alex-shpak/hugo-book)
+- [gitalk 评论插件](https://github.com/gitalk/gitalk)
