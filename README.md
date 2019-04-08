@@ -29,3 +29,4 @@ MIT
 - [多语言支持说明](https://gohugo.io/content-management/multilingual/)
 - [hugo-book 主题](https://github.com/alex-shpak/hugo-book)
 - [gitalk 评论插件](https://github.com/gitalk/gitalk)
+- [github-markdown-css](https://github.com/sindresorhus/github-markdown-css)
