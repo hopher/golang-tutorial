@@ -138,7 +138,7 @@
 <li>短变量声明 <code>:=</code></li>
 </ol>
 
-<h2 id="示例">示例</h2>
+<p><strong>示例</strong></p>
 
 <pre><code>package main
 
@@ -165,12 +165,44 @@ func main() {
     // gopher3
 }
 </code></pre>
+
+<h2 id="3种变量作用域">3种变量作用域</h2>
+
+<ul>
+<li>局部变量</li>
+<li>全局变量</li>
+<li>形式参数</li>
+</ul>
+
+<p><strong>局部变量</strong></p>
+
+<pre><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+   /* 声明局部变量 */
+   var a, b, c int 
+
+   /* 初始化参数 */
+   a = 10
+   b = 20
+   c = a + b
+
+   fmt.Printf (&quot;结果： a = %d, b = %d and c = %d\n&quot;, a, b, c)
+}
+</code></pre>
+
+<p><strong>全局变量</strong></p>
+
+<pre><code>
+</code></pre>
 </article>
 
       
 <div class="align-center book-git-footer justify-between">
   
-  <div><a href="https://github.com/hopher/golang-tutorial/commit/b3f28ae317596d12c223530896c88ba7f012ada5" title='Last modified Apr 8, 2019 by hopher' target="_blank" rel="noopener">
+  <div><a href="https://github.com/hopher/golang-tutorial/commit/cc2f3456300e4941c775d3df670eb4c2b346ee4c" title='Last modified Apr 8, 2019 by hopher' target="_blank" rel="noopener">
       <img src="/golang-tutorial/svg/code-merge.svg" /> Apr 8, 2019
     </a>
   </div>
@@ -214,7 +246,7 @@ func main() {
 <li>
 <ul>
 <li><a href="#3种变量声明方式">3种变量声明方式</a></li>
-<li><a href="#示例">示例</a></li>
+<li><a href="#3种变量作用域">3种变量作用域</a></li>
 </ul></li>
 </ul>
 </nav>

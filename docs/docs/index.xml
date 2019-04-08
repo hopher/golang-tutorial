@@ -42,7 +42,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hopher.github.io/golang-tutorial/docs/03-xx/</guid>
-      <description> 3种变量声明方式  无初始化, 指定变量类型 var 类型推断 短变量声明 :=  示例 package main import &amp;quot;fmt&amp;quot; func main() { // 1. 无初始化, 指定变量类型 var name string var age int fmt.Printf(&amp;quot;%q %d\n&amp;quot;, name, age) // 输出结果 // &amp;quot;&amp;quot; 0 // 2. var 类型推断 var name2 = &amp;quot;gopher2&amp;quot; fmt.Printf(&amp;quot;%s\n&amp;quot;, name2) // 输出结果 // gopher2 // 3. 短变量声明 := name3 := &amp;quot;gopher3&amp;quot; fmt.Printf(&amp;quot;%s\n&amp;quot;, name3) // 输出结果 // gopher3 }  </description>
+      <description>3种变量声明方式  无初始化, 指定变量类型 var 类型推断 短变量声明 :=  示例
+package main import &amp;quot;fmt&amp;quot; func main() { // 1. 无初始化, 指定变量类型 var name string var age int fmt.Printf(&amp;quot;%q %d\n&amp;quot;, name, age) // 输出结果 // &amp;quot;&amp;quot; 0 // 2. var 类型推断 var name2 = &amp;quot;gopher2&amp;quot; fmt.Printf(&amp;quot;%s\n&amp;quot;, name2) // 输出结果 // gopher2 // 3. 短变量声明 := name3 := &amp;quot;gopher3&amp;quot; fmt.Printf(&amp;quot;%s\n&amp;quot;, name3) // 输出结果 // gopher3 }  3种变量作用域  局部变量 全局变量 形式参数  局部变量</description>
     </item>
     
     <item>
@@ -59,7 +60,7 @@
 (d) Channel 类型
 (e) 函数类型
 (f) 切片类型
-(g) 接口类型（interface
+(g) 接口类型（interface)
 (h) Map 类型    数字类型 Go 也有基于架构的类型，例如：int、uint 和 uintptr。</description>
     </item>
     
@@ -69,7 +70,8 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hopher.github.io/golang-tutorial/docs/05-xx/</guid>
-      <description></description>
+      <description>正则用法：
+/* 函数返回两个数的最大值 */ func max(num1, num2 int) int { /* 声明局部变量 */ var result int if (num1 &amp;gt; num2) { result = num1 } else { result = num2 } return result }  闭包：</description>
     </item>
     
     <item>
