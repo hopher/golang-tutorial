@@ -43,7 +43,8 @@
       
       <guid>https://hopher.github.io/golang-tutorial/docs/03-xx/</guid>
       <description>3种变量声明方式  无初始化, 指定变量类型 var 类型推断 短变量声明 :=  示例
-package main import &amp;quot;fmt&amp;quot; func main() { // 1. 无初始化, 指定变量类型 var name string var age int fmt.Printf(&amp;quot;%q %d\n&amp;quot;, name, age) // 输出结果 // &amp;quot;&amp;quot; 0 // 2. var 类型推断 var name2 = &amp;quot;gopher2&amp;quot; fmt.Printf(&amp;quot;%s\n&amp;quot;, name2) // 输出结果 // gopher2 // 3. 短变量声明 := name3 := &amp;quot;gopher3&amp;quot; fmt.Printf(&amp;quot;%s\n&amp;quot;, name3) // 输出结果 // gopher3 }  3种变量作用域  局部变量 全局变量 形式参数  局部变量</description>
+package main import &amp;quot;fmt&amp;quot; func main() { // 1. 无初始化, 指定变量类型 var name string var age int fmt.Printf(&amp;quot;%q %d\n&amp;quot;, name, age) // 输出结果 // &amp;quot;&amp;quot; 0 // 2. var 类型推断 var name2 = &amp;quot;gopher2&amp;quot; fmt.Printf(&amp;quot;%s\n&amp;quot;, name2) // 输出结果 // gopher2 // 3. 短变量声明 := name3 := &amp;quot;gopher3&amp;quot; fmt.Printf(&amp;quot;%s\n&amp;quot;, name3) // 输出结果 // gopher3 }  3种变量作用域  局部变量
+作用域只在函数体内 全局变量</description>
     </item>
     
     <item>
@@ -80,7 +81,12 @@ package main import &amp;quot;fmt&amp;quot; func main() { // 1. 无初始化, �
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hopher.github.io/golang-tutorial/docs/06-xx/</guid>
-      <description></description>
+      <description>数组 数组声明
+var balance [10] float32  初始化数组
+ [&amp;hellip;] 为不定长
+ var balance = [5]float32{1000.0, 2.0, 3.4, 7.0, 50.0} var balance = [...]float32{1000.0, 2.0, 3.4, 7.0, 50.0}  访问数组元素
+var salary float32 = balance[9]  示例：
+package main import &amp;quot;fmt&amp;quot; func main() { var n [10]int /* n 是一个长度为 10 的数组 */ var i,j int /* 为数组 n 初始化元素 */ for i = 0; i &amp;lt; 10; i++ { n[i] = i + 100 /* 设置元素为 i + 100 */ } /* 输出每个数组元素的值 */ for j = 0; j &amp;lt; 10; j++ { fmt.</description>
     </item>
     
     <item>

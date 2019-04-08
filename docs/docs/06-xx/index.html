@@ -128,12 +128,58 @@
 </header>
 
       
-<article class="github-markdown"></article>
+<article class="github-markdown">
+
+<h1 id="数组">数组</h1>
+
+<p>数组声明</p>
+
+<pre><code>var balance [10] float32
+</code></pre>
+
+<p>初始化数组</p>
+
+<blockquote>
+<p>[&hellip;] 为不定长</p>
+</blockquote>
+
+<pre><code>var balance = [5]float32{1000.0, 2.0, 3.4, 7.0, 50.0}
+
+var balance = [...]float32{1000.0, 2.0, 3.4, 7.0, 50.0}
+</code></pre>
+
+<p>访问数组元素</p>
+
+<pre><code>var salary float32 = balance[9]
+</code></pre>
+
+<p>示例：</p>
+
+<pre><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+   var n [10]int /* n 是一个长度为 10 的数组 */
+   var i,j int
+
+   /* 为数组 n 初始化元素 */         
+   for i = 0; i &lt; 10; i++ {
+      n[i] = i + 100 /* 设置元素为 i + 100 */
+   }
+
+   /* 输出每个数组元素的值 */
+   for j = 0; j &lt; 10; j++ {
+      fmt.Printf(&quot;Element[%d] = %d\n&quot;, j, n[j] )
+   }
+}
+</code></pre>
+</article>
 
       
 <div class="align-center book-git-footer justify-between">
   
-  <div><a href="https://github.com/hopher/golang-tutorial/commit/2806e307361472e682a9304c149cf19082291ec6" title='Last modified Apr 8, 2019 by hopher' target="_blank" rel="noopener">
+  <div><a href="https://github.com/hopher/golang-tutorial/commit/35a7cfc679d1570d288fc82cd1fe2c3a0208ea28" title='Last modified Apr 8, 2019 by hopher' target="_blank" rel="noopener">
       <img src="/golang-tutorial/svg/code-merge.svg" /> Apr 8, 2019
     </a>
   </div>
@@ -171,6 +217,14 @@
     
   
   
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#数组">数组</a></li>
+</ul>
+</nav>
+  </aside>
+
 
 
 

@@ -169,9 +169,18 @@ func main() {
 <h2 id="3种变量作用域">3种变量作用域</h2>
 
 <ul>
-<li>局部变量</li>
-<li>全局变量</li>
-<li>形式参数</li>
+<li>局部变量<br />
+作用域只在函数体内</li>
+
+<li><p>全局变量<br />
+全局变量可以在整个包 &amp;&amp; 外部包（被导出后）使用
+&gt; 外部包引用，变量要大写</p>
+
+<pre><code>import &quot;outside&quot;
+fmt.Printf(&quot;%s&quot;, outside.Name)
+</code></pre></li>
+
+<li><p>形式参数</p></li>
 </ul>
 
 <p><strong>局部变量</strong></p>
@@ -195,14 +204,63 @@ func main() {
 
 <p><strong>全局变量</strong></p>
 
-<pre><code>
+<pre><code>package main
+
+import &quot;fmt&quot;
+
+/* 声明全局变量 */
+var g int
+
+func main() {
+
+   /* 声明局部变量 */
+   var a, b int
+
+   /* 初始化参数 */
+   a = 10
+   b = 20
+   g = a + b
+
+   fmt.Printf(&quot;结果： a = %d, b = %d and g = %d\n&quot;, a, b, g)
+}
+</code></pre>
+
+<p><strong>形式参数</strong></p>
+
+<p>形式参数会作为函数的局部变量来使用。实例如下：</p>
+
+<pre><code>package main
+
+import &quot;fmt&quot;
+
+/* 声明全局变量 */
+var a int = 20;
+
+func main() {
+   /* main 函数中声明局部变量 */
+   var a int = 10
+   var b int = 20
+   var c int = 0
+
+   fmt.Printf(&quot;main()函数中 a = %d\n&quot;,  a);
+   c = sum( a, b);
+   fmt.Printf(&quot;main()函数中 c = %d\n&quot;,  c);
+}
+
+/* 函数定义-两数相加 */
+func sum(a, b int) int {
+   fmt.Printf(&quot;sum() 函数中 a = %d\n&quot;,  a);
+   fmt.Printf(&quot;sum() 函数中 b = %d\n&quot;,  b);
+
+   return a + b;
+}
 </code></pre>
 </article>
 
       
 <div class="align-center book-git-footer justify-between">
   
-  <div><a href="https://github.com/hopher/golang-tutorial/commit/cc2f3456300e4941c775d3df670eb4c2b346ee4c" title='Last modified Apr 8, 2019 by hopher' target="_blank" rel="noopener">
+  <div><a href="https://github.com/hopher/golang-tutorial/commit/35a7cfc679d1570d288fc82cd1fe2c3a0208ea28" title='Last modified Apr 8, 2019 by hopher' target="_blank" rel="noopener">
       <img src="/golang-tutorial/svg/code-merge.svg" /> Apr 8, 2019
     </a>
   </div>
