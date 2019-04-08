@@ -11,6 +11,15 @@
     
     <item>
       <title></title>
+      <link>https://hopher.github.io/golang-tutorial/docs/00-xx/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hopher.github.io/golang-tutorial/docs/00-xx/</guid>
+      <description>安装 使用docker，移植性好!!</description>
+    </item>
+    
+    <item>
+      <title></title>
       <link>https://hopher.github.io/golang-tutorial/docs/01-xx/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -33,7 +42,7 @@
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hopher.github.io/golang-tutorial/docs/03-xx/</guid>
-      <description></description>
+      <description> 3种变量声明方式  xxx xx xxx  </description>
     </item>
     
     <item>
