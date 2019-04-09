@@ -23,15 +23,6 @@ headless: true
   - [类型转换]({{< relref "/docs/base/18-类型转换.md" >}})
   - [错误处理]({{< relref "/docs/base/19-错误处理.md" >}})
   - [并发]({{< relref "/docs/base/20-并发.md" >}})
-  
-- **基础知识2**
-  - [变量]({{< relref "/docs/03-1-变量.md" >}})
-  - [常量]({{< relref "/docs/03-2-常量.md" >}})
-  - [数据类型]({{< relref "/docs/04-数据类型.md" >}})
-  - [运算符]({{< relref "/docs/05-2-运算符.md" >}})
-  - [数组]({{< relref "/docs/06-数组.md" >}})
-  - [指针]({{< relref "/docs/07-指针.md" >}})
-  - [切片]({{< relref "/docs/09-切片.md" >}})
 
 - **进阶知识**
   - [异常处理]({{< relref "/docs/99-xx.md" >}})
