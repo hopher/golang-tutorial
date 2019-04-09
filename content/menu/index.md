@@ -23,23 +23,15 @@ headless: true
   - [错误处理]({{< relref "/docs/base/01-安装.md" >}})
   - [并发]({{< relref "/docs/base/01-安装.md" >}})
   
-- **序言**
-  - [简介]({{< relref "/docs/00-简介.md" >}})
-
-- **入门指南**
-  - [安装 && 配置]({{< relref "/docs/01-安装.md" >}})
-  - [Hello world]({{< relref "/docs/02-hello-world.md" >}})
 
 - **基础知识**
   - [变量]({{< relref "/docs/03-1-变量.md" >}})
   - [常量]({{< relref "/docs/03-2-常量.md" >}})
   - [数据类型]({{< relref "/docs/04-数据类型.md" >}})
-  - [函数定义]({{< relref "/docs/05-函数定义.md" >}})
+  - [运算符]({{< relref "/docs/05-2-运算符.md" >}})
   - [数组]({{< relref "/docs/06-数组.md" >}})
   - [指针]({{< relref "/docs/07-指针.md" >}})
-  - [结构体]({{< relref "/docs/08-结构体.md" >}})
   - [切片]({{< relref "/docs/09-切片.md" >}})
-  - [条件语句]({{< relref "/docs/10-条件语句.md" >}})
 
 - **进阶知识**
   - [异常处理]({{< relref "/docs/11-异常处理.md" >}})
