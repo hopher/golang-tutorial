@@ -72,20 +72,7 @@
 <li><a href="/golang-tutorial/docs/base/17-%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0/">递归函数</a></li>
 <li><a href="/golang-tutorial/docs/base/18-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/">类型转换</a></li>
 <li><a href="/golang-tutorial/docs/base/19-%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86/">错误处理</a></li>
-<li><a href="/golang-tutorial/docs/base/20-%E5%B9%B6%E5%8F%91/">并发</a>
-<br /></li>
-</ul></li>
-
-<li><p><strong>基础知识2</strong></p>
-
-<ul>
-<li><a href="/golang-tutorial/docs/03-1-%E5%8F%98%E9%87%8F/">变量</a></li>
-<li><a href="/golang-tutorial/docs/03-2-%E5%B8%B8%E9%87%8F/">常量</a></li>
-<li><a href="/golang-tutorial/docs/04-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">数据类型</a></li>
-<li><a href="/golang-tutorial/docs/05-2-%E8%BF%90%E7%AE%97%E7%AC%A6/">运算符</a></li>
-<li><a href="/golang-tutorial/docs/06-%E6%95%B0%E7%BB%84/">数组</a></li>
-<li><a href="/golang-tutorial/docs/07-%E6%8C%87%E9%92%88/">指针</a></li>
-<li><a href="/golang-tutorial/docs/09-%E5%88%87%E7%89%87/">切片</a></li>
+<li><a href="/golang-tutorial/docs/base/20-%E5%B9%B6%E5%8F%91/">并发</a></li>
 </ul></li>
 
 <li><p><strong>进阶知识</strong></p>
@@ -140,7 +127,175 @@
 </header>
 
       
-<article class="github-markdown"></article>
+<article class="github-markdown">
+
+<p><style>
+table th:first-of-type {
+    width: 60px;
+}
+</style></p>
+
+<h2 id="数据类型">数据类型</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">序号</th>
+<th align="left">类型和描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">1</td>
+<td align="left"><strong>布尔型</strong> 布尔型的值只可以是常量 true 或者 false。一个简单的例子：var b bool = true。</td>
+</tr>
+
+<tr>
+<td align="left">2</td>
+<td align="left"><strong>数字类型</strong> 整型 int 和浮点型 float32、float64，Go 语言支持整型和浮点型数字，并且支持复数，其中位的运算采用补码。</td>
+</tr>
+
+<tr>
+<td align="left">3</td>
+<td align="left"><strong>字符串类型:</strong> 字符串就是一串固定长度的字符连接起来的字符序列。Go 的字符串是由单个字节连接起来的。Go 语言的字符串的字节使用 UTF-8 编码标识 Unicode 文本。</td>
+</tr>
+
+<tr>
+<td align="left">4</td>
+<td align="left"><strong>派生类型:</strong><br>(a) 指针类型（Pointer）<br> (b) 数组类型<br> (c) 结构化类型(struct)<br> (d) Channel 类型<br> (e) 函数类型<br> (f) 切片类型<br> (g) 接口类型（interface)<br> (h) Map 类型</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="数字类型">数字类型</h2>
+
+<p>Go 也有基于架构的类型，例如：int、uint 和 uintptr。</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">序号</th>
+<th align="left">类型和描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">1</td>
+<td align="left"><strong>uint8</strong> 无符号 8 位整型 (0 到 255)</td>
+</tr>
+
+<tr>
+<td align="left">2</td>
+<td align="left"><strong>uint16</strong> 无符号 16 位整型 (0 到 65535)</td>
+</tr>
+
+<tr>
+<td align="left">3</td>
+<td align="left"><strong>uint32</strong> 无符号 32 位整型 (0 到 4294967295)</td>
+</tr>
+
+<tr>
+<td align="left">4</td>
+<td align="left"><strong>uint64</strong> 无符号 64 位整型 (0 到 18446744073709551615)</td>
+</tr>
+
+<tr>
+<td align="left">5</td>
+<td align="left"><strong>int8</strong> 有符号 8 位整型 (-128 到 127)</td>
+</tr>
+
+<tr>
+<td align="left">6</td>
+<td align="left"><strong>int16</strong> 有符号 16 位整型 (-32768 到 32767)</td>
+</tr>
+
+<tr>
+<td align="left">7</td>
+<td align="left"><strong>int32</strong> 有符号 32 位整型 (-2147483648 到 2147483647)</td>
+</tr>
+
+<tr>
+<td align="left">8</td>
+<td align="left"><strong>int64</strong> 有符号 64 位整型 (-9223372036854775808 到 9223372036854775807)</td>
+</tr>
+</tbody>
+</table>
+
+<p>浮点型：</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">序号</th>
+<th align="left">类型和描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">1</td>
+<td align="left"><strong>float32</strong> IEEE-754 32位浮点型数</td>
+</tr>
+
+<tr>
+<td align="left">2</td>
+<td align="left"><strong>float64</strong> IEEE-754 64位浮点型数</td>
+</tr>
+
+<tr>
+<td align="left">3</td>
+<td align="left"><strong>complex64</strong> 32 位实数和虚数</td>
+</tr>
+
+<tr>
+<td align="left">4</td>
+<td align="left"><strong>complex128</strong> 64 位实数和虚数</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="其他数字类型">其他数字类型</h2>
+
+<p>以下列出了其他更多的数字类型：</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">序号</th>
+<th align="left">类型和描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">1</td>
+<td align="left"><strong>byte</strong> 类似 uint8</td>
+</tr>
+
+<tr>
+<td align="left">2</td>
+<td align="left"><strong>rune</strong> 类似 int32</td>
+</tr>
+
+<tr>
+<td align="left">3</td>
+<td align="left"><strong>uint</strong> 32 或 64 位</td>
+</tr>
+
+<tr>
+<td align="left">4</td>
+<td align="left"><strong>int</strong> 与 uint 一样大小</td>
+</tr>
+
+<tr>
+<td align="left">5</td>
+<td align="left"><strong>uintptr</strong> 无符号整型，用于存放一个指针</td>
+</tr>
+</tbody>
+</table>
+</article>
 
       
 <div class="align-center book-git-footer justify-end">

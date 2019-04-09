@@ -57,95 +57,6 @@ Follow the following steps:
     
     <item>
       <title></title>
-      <link>https://hopher.github.io/golang-tutorial/docs/03-1-%E5%8F%98%E9%87%8F/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hopher.github.io/golang-tutorial/docs/03-1-%E5%8F%98%E9%87%8F/</guid>
-      <description>3种变量声明方式  无初始化, 指定变量类型 var 类型推断 短变量声明 :=  示例
-package main import &amp;quot;fmt&amp;quot; func main() { // 1. 无初始化, 指定变量类型 var name string var age int fmt.Printf(&amp;quot;%q %d\n&amp;quot;, name, age) // 输出结果 // &amp;quot;&amp;quot; 0 // 2. var 类型推断 var name2 = &amp;quot;gopher2&amp;quot; fmt.Printf(&amp;quot;%s\n&amp;quot;, name2) // 输出结果 // gopher2 // 3. 短变量声明 := name3 := &amp;quot;gopher3&amp;quot; fmt.Printf(&amp;quot;%s\n&amp;quot;, name3) // 输出结果 // gopher3 }  3种变量作用域  局部变量
-作用域只在函数体内 全局变量</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://hopher.github.io/golang-tutorial/docs/03-2-%E5%B8%B8%E9%87%8F/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hopher.github.io/golang-tutorial/docs/03-2-%E5%B8%B8%E9%87%8F/</guid>
-      <description> 常量 格式：
-const identifier [type] = value  [type] 可以省略，使用直行推断
-示例:
-const b string = &amp;quot;abc&amp;quot; const b = &amp;quot;abc&amp;quot;  多个相同类型的声明, 简写
-const c_name1, c_name2 = value1, value2  </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://hopher.github.io/golang-tutorial/docs/04-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hopher.github.io/golang-tutorial/docs/04-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</guid>
-      <description>table th:first-of-type { width: 60px; } 
-数据类型    序号 类型和描述     1 布尔型 布尔型的值只可以是常量 true 或者 false。一个简单的例子：var b bool = true。   2 数字类型 整型 int 和浮点型 float32、float64，Go 语言支持整型和浮点型数字，并且支持复数，其中位的运算采用补码。   3 字符串类型: 字符串就是一串固定长度的字符连接起来的字符序列。Go 的字符串是由单个字节连接起来的。Go 语言的字符串的字节使用 UTF-8 编码标识 Unicode 文本。   4 派生类型:
-(a) 指针类型（Pointer）
-(b) 数组类型
-(c) 结构化类型(struct)
-(d) Channel 类型
-(e) 函数类型
-(f) 切片类型
-(g) 接口类型（interface)
-(h) Map 类型    数字类型 Go 也有基于架构的类型，例如：int、uint 和 uintptr。</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://hopher.github.io/golang-tutorial/docs/05-2-%E8%BF%90%E7%AE%97%E7%AC%A6/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hopher.github.io/golang-tutorial/docs/05-2-%E8%BF%90%E7%AE%97%E7%AC%A6/</guid>
-      <description> 运算符  算术运算符 关系运算符 逻辑运算符 位运算符 赋值运算符 其他运算符  </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://hopher.github.io/golang-tutorial/docs/06-%E6%95%B0%E7%BB%84/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hopher.github.io/golang-tutorial/docs/06-%E6%95%B0%E7%BB%84/</guid>
-      <description>数组 数组声明
-var balance [10] float32  初始化数组
- [&amp;hellip;] 为不定长
- var balance = [5]float32{1000.0, 2.0, 3.4, 7.0, 50.0} var balance = [...]float32{1000.0, 2.0, 3.4, 7.0, 50.0}  访问数组元素
-var salary float32 = balance[9]  示例：
-package main import &amp;quot;fmt&amp;quot; func main() { var n [10]int /* n 是一个长度为 10 的数组 */ var i,j int /* 为数组 n 初始化元素 */ for i = 0; i &amp;lt; 10; i++ { n[i] = i + 100 /* 设置元素为 i + 100 */ } /* 输出每个数组元素的值 */ for j = 0; j &amp;lt; 10; j++ { fmt.</description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://hopher.github.io/golang-tutorial/docs/07-%E6%8C%87%E9%92%88/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hopher.github.io/golang-tutorial/docs/07-%E6%8C%87%E9%92%88/</guid>
-      <description> 指针 指针，返回的是内存地址空间 (十六进制)
-格式：0xc000070010, 开头的“0”令解析器更易辨认数，而“x”则代表十六进制
- 二进制 数据在计算机中的表示，最终是以二进制的形式存在 - 优点：更直观地解决 - 缺点：太长，不容易思考，可以用更短的16进制表示
- 指针一般用 ptr 表示
-package main import &amp;quot;fmt&amp;quot; func main() { var a int = 10 fmt.Printf(&amp;quot;变量的地址: %v\n&amp;quot;, &amp;amp;a ) fmt.Printf(&amp;quot;变量的地址: %#x\n&amp;quot;, &amp;amp;a ) }  </description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://hopher.github.io/golang-tutorial/docs/09-%E5%88%87%E7%89%87/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hopher.github.io/golang-tutorial/docs/09-%E5%88%87%E7%89%87/</guid>
-      <description>切片 切片扩容时，会重新建立新的底层数组，内存重新分配内存储存空间, 然后把旧的数据复制到新的数组里, 时间复杂度O(n) 切片长度 &amp;gt;= 1024时, 以1.25倍进行扩容, 小于1024时则2倍扩容
-golang 官方文档在关于 slice 的 append 一节有说明： &amp;gt; If the capacity of s is not large enough to fit the additional values, append allocates a new, sufficiently large underlying array that fits both the existing slice elements and the additional values. Otherwise, append re-uses the underlying array.
-也就是说，如果原来的底层数组足够大，能放的下 append 的数据，就不会新建底层数组。而如果不够的话，则会分配一个新的数组。也因此是 O(n) 的时间复杂度</description>
-    </item>
-    
-    <item>
-      <title></title>
       <link>https://hopher.github.io/golang-tutorial/docs/99-xx/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
@@ -199,7 +110,16 @@ fmt.Printf(&amp;quot;|%5d|&amp;quot;, 1) fmt.Printf(&amp;quot;|%5d|&amp;quot;, 1
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hopher.github.io/golang-tutorial/docs/base/04-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</guid>
-      <description></description>
+      <description>table th:first-of-type { width: 60px; } 
+数据类型    序号 类型和描述     1 布尔型 布尔型的值只可以是常量 true 或者 false。一个简单的例子：var b bool = true。   2 数字类型 整型 int 和浮点型 float32、float64，Go 语言支持整型和浮点型数字，并且支持复数，其中位的运算采用补码。   3 字符串类型: 字符串就是一串固定长度的字符连接起来的字符序列。Go 的字符串是由单个字节连接起来的。Go 语言的字符串的字节使用 UTF-8 编码标识 Unicode 文本。   4 派生类型:
+(a) 指针类型（Pointer）
+(b) 数组类型
+(c) 结构化类型(struct)
+(d) Channel 类型
+(e) 函数类型
+(f) 切片类型
+(g) 接口类型（interface)
+(h) Map 类型    数字类型 Go 也有基于架构的类型，例如：int、uint 和 uintptr。</description>
     </item>
     
     <item>
@@ -208,7 +128,11 @@ fmt.Printf(&amp;quot;|%5d|&amp;quot;, 1) fmt.Printf(&amp;quot;|%5d|&amp;quot;, 1
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hopher.github.io/golang-tutorial/docs/base/05-%E5%8F%98%E9%87%8F/</guid>
-      <description></description>
+      <description> 3种变量声明方式  无初始化, 指定变量类型 var 类型推断 短变量声明 :=  3种变量作用域  局部变量
+作用域只在函数体内 全局变量
+全局变量可以在整个包 &amp;amp;&amp;amp; 外部包（被导出后）使用 &amp;gt; 外部包引用，变量要大写
+import &amp;quot;outside&amp;quot; fmt.Printf(&amp;quot;%s&amp;quot;, outside.Name)  形式参数 形式参数会作为函数的局部变量来使用。
+  </description>
     </item>
     
     <item>
@@ -217,7 +141,11 @@ fmt.Printf(&amp;quot;|%5d|&amp;quot;, 1) fmt.Printf(&amp;quot;|%5d|&amp;quot;, 1
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hopher.github.io/golang-tutorial/docs/base/06-%E5%B8%B8%E9%87%8F/</guid>
-      <description></description>
+      <description> 常量 格式：
+const identifier [type] = value  [type] 可以省略，使用直行推断
+示例:
+const b string = &amp;quot;abc&amp;quot; const b = &amp;quot;abc&amp;quot;  多个相同类型的声明, 简写
+const c_name1, c_name2 = value1, value2  </description>
     </item>
     
     <item>
@@ -226,7 +154,7 @@ fmt.Printf(&amp;quot;|%5d|&amp;quot;, 1) fmt.Printf(&amp;quot;|%5d|&amp;quot;, 1
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hopher.github.io/golang-tutorial/docs/base/07-%E8%BF%90%E7%AE%97%E7%AC%A6/</guid>
-      <description></description>
+      <description> 运算符  算术运算符 关系运算符 逻辑运算符 位运算符 赋值运算符 其他运算符  </description>
     </item>
     
     <item>
@@ -271,7 +199,12 @@ fmt.Printf(&amp;quot;|%5d|&amp;quot;, 1) fmt.Printf(&amp;quot;|%5d|&amp;quot;, 1
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hopher.github.io/golang-tutorial/docs/base/12-%E6%95%B0%E7%BB%84/</guid>
-      <description></description>
+      <description>数组 数组声明
+var balance [10] float32  初始化数组
+ [&amp;hellip;] 为不定长
+ var balance = [5]float32{1000.0, 2.0, 3.4, 7.0, 50.0} var balance = [...]float32{1000.0, 2.0, 3.4, 7.0, 50.0}  访问数组元素
+var salary float32 = balance[9]  示例：
+package main import &amp;quot;fmt&amp;quot; func main() { var n [10]int /* n 是一个长度为 10 的数组 */ var i,j int /* 为数组 n 初始化元素 */ for i = 0; i &amp;lt; 10; i++ { n[i] = i + 100 /* 设置元素为 i + 100 */ } /* 输出每个数组元素的值 */ for j = 0; j &amp;lt; 10; j++ { fmt.</description>
     </item>
     
     <item>
@@ -280,7 +213,11 @@ fmt.Printf(&amp;quot;|%5d|&amp;quot;, 1) fmt.Printf(&amp;quot;|%5d|&amp;quot;, 1
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hopher.github.io/golang-tutorial/docs/base/13-%E6%8C%87%E9%92%88/</guid>
-      <description></description>
+      <description> 指针 指针，返回的是内存地址空间 (十六进制)
+格式：0xc000070010, 开头的“0”令解析器更易辨认数，而“x”则代表十六进制
+ 二进制 数据在计算机中的表示，最终是以二进制的形式存在 - 优点：更直观地解决 - 缺点：太长，不容易思考，可以用更短的16进制表示
+ 指针一般用 ptr 表示
+package main import &amp;quot;fmt&amp;quot; func main() { var a int = 10 fmt.Printf(&amp;quot;变量的地址: %v\n&amp;quot;, &amp;amp;a ) fmt.Printf(&amp;quot;变量的地址: %#x\n&amp;quot;, &amp;amp;a ) }  </description>
     </item>
     
     <item>
@@ -289,7 +226,9 @@ fmt.Printf(&amp;quot;|%5d|&amp;quot;, 1) fmt.Printf(&amp;quot;|%5d|&amp;quot;, 1
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
       <guid>https://hopher.github.io/golang-tutorial/docs/base/14-%E5%88%87%E7%89%87/</guid>
-      <description></description>
+      <description>切片 切片扩容时，会重新建立新的底层数组，内存重新分配内存储存空间, 然后把旧的数据复制到新的数组里, 时间复杂度O(n) 切片长度 &amp;gt;= 1024时, 以1.25倍进行扩容, 小于1024时则2倍扩容
+golang 官方文档在关于 slice 的 append 一节有说明： &amp;gt; If the capacity of s is not large enough to fit the additional values, append allocates a new, sufficiently large underlying array that fits both the existing slice elements and the additional values. Otherwise, append re-uses the underlying array.
+也就是说，如果原来的底层数组足够大，能放的下 append 的数据，就不会新建底层数组。而如果不够的话，则会分配一个新的数组。也因此是 O(n) 的时间复杂度</description>
     </item>
     
     <item>

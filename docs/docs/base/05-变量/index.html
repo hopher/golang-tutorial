@@ -72,20 +72,7 @@
 <li><a href="/golang-tutorial/docs/base/17-%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0/">递归函数</a></li>
 <li><a href="/golang-tutorial/docs/base/18-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/">类型转换</a></li>
 <li><a href="/golang-tutorial/docs/base/19-%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86/">错误处理</a></li>
-<li><a href="/golang-tutorial/docs/base/20-%E5%B9%B6%E5%8F%91/">并发</a>
-<br /></li>
-</ul></li>
-
-<li><p><strong>基础知识2</strong></p>
-
-<ul>
-<li><a href="/golang-tutorial/docs/03-1-%E5%8F%98%E9%87%8F/">变量</a></li>
-<li><a href="/golang-tutorial/docs/03-2-%E5%B8%B8%E9%87%8F/">常量</a></li>
-<li><a href="/golang-tutorial/docs/04-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">数据类型</a></li>
-<li><a href="/golang-tutorial/docs/05-2-%E8%BF%90%E7%AE%97%E7%AC%A6/">运算符</a></li>
-<li><a href="/golang-tutorial/docs/06-%E6%95%B0%E7%BB%84/">数组</a></li>
-<li><a href="/golang-tutorial/docs/07-%E6%8C%87%E9%92%88/">指针</a></li>
-<li><a href="/golang-tutorial/docs/09-%E5%88%87%E7%89%87/">切片</a></li>
+<li><a href="/golang-tutorial/docs/base/20-%E5%B9%B6%E5%8F%91/">并发</a></li>
 </ul></li>
 
 <li><p><strong>进阶知识</strong></p>
@@ -140,7 +127,34 @@
 </header>
 
       
-<article class="github-markdown"></article>
+<article class="github-markdown">
+
+<h2 id="3种变量声明方式">3种变量声明方式</h2>
+
+<ol>
+<li>无初始化, 指定变量类型</li>
+<li><code>var</code> 类型推断</li>
+<li>短变量声明 <code>:=</code></li>
+</ol>
+
+<h2 id="3种变量作用域">3种变量作用域</h2>
+
+<ul>
+<li>局部变量<br />
+作用域只在函数体内</li>
+
+<li><p>全局变量<br />
+全局变量可以在整个包 &amp;&amp; 外部包（被导出后）使用
+&gt; 外部包引用，变量要大写</p>
+
+<pre><code>import &quot;outside&quot;
+fmt.Printf(&quot;%s&quot;, outside.Name)
+</code></pre></li>
+
+<li><p>形式参数
+形式参数会作为函数的局部变量来使用。</p></li>
+</ul>
+</article>
 
       
 <div class="align-center book-git-footer justify-end">
@@ -178,6 +192,18 @@
     
   
   
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#3种变量声明方式">3种变量声明方式</a></li>
+<li><a href="#3种变量作用域">3种变量作用域</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
 
 
 

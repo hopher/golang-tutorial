@@ -72,20 +72,7 @@
 <li><a href="/golang-tutorial/docs/base/17-%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0/">递归函数</a></li>
 <li><a href="/golang-tutorial/docs/base/18-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/">类型转换</a></li>
 <li><a href="/golang-tutorial/docs/base/19-%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86/">错误处理</a></li>
-<li><a href="/golang-tutorial/docs/base/20-%E5%B9%B6%E5%8F%91/">并发</a>
-<br /></li>
-</ul></li>
-
-<li><p><strong>基础知识2</strong></p>
-
-<ul>
-<li><a href="/golang-tutorial/docs/03-1-%E5%8F%98%E9%87%8F/">变量</a></li>
-<li><a href="/golang-tutorial/docs/03-2-%E5%B8%B8%E9%87%8F/">常量</a></li>
-<li><a href="/golang-tutorial/docs/04-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/">数据类型</a></li>
-<li><a href="/golang-tutorial/docs/05-2-%E8%BF%90%E7%AE%97%E7%AC%A6/">运算符</a></li>
-<li><a href="/golang-tutorial/docs/06-%E6%95%B0%E7%BB%84/">数组</a></li>
-<li><a href="/golang-tutorial/docs/07-%E6%8C%87%E9%92%88/">指针</a></li>
-<li><a href="/golang-tutorial/docs/09-%E5%88%87%E7%89%87/">切片</a></li>
+<li><a href="/golang-tutorial/docs/base/20-%E5%B9%B6%E5%8F%91/">并发</a></li>
 </ul></li>
 
 <li><p><strong>进阶知识</strong></p>
@@ -140,7 +127,18 @@
 </header>
 
       
-<article class="github-markdown"></article>
+<article class="github-markdown">
+
+<h1 id="切片">切片</h1>
+
+<p>切片扩容时，会重新建立新的底层数组，内存重新分配内存储存空间, 然后把旧的数据复制到新的数组里, 时间复杂度O(n)
+切片长度 &gt;= 1024时, 以1.25倍进行扩容, 小于1024时则2倍扩容</p>
+
+<p>golang 官方文档在关于 slice 的 append 一节有说明：
+&gt; If the capacity of s is not large enough to fit the additional values, append allocates a new, sufficiently large underlying array that fits both the existing slice elements and the additional values. Otherwise, append re-uses the underlying array.</p>
+
+<p>也就是说，如果原来的底层数组足够大，能放的下 append 的数据，就不会新建底层数组。而如果不够的话，则会分配一个新的数组。也因此是 O(n) 的时间复杂度</p>
+</article>
 
       
 <div class="align-center book-git-footer justify-end">
@@ -178,6 +176,14 @@
     
   
   
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#切片">切片</a></li>
+</ul>
+</nav>
+  </aside>
+
 
 
 
