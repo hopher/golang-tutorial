@@ -1,17 +1,15 @@
 <!DOCTYPE html><html>
 
 <head>
-	<meta name="generator" content="Hugo 0.55.0-DEV" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>
-    Introduction | Golang Tutorial</title>
+<title>15-切片 | Golang Tutorial</title>
 
 <link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
 <link rel="stylesheet" href="/golang-tutorial/normalize.min.css">
 
 <link rel="stylesheet" href="/golang-tutorial/book.min.b19e39655cbb35014c212261acf02c44c22b653e1183471f8513702b5bfd8f54.css">
-<link rel="stylesheet" href="/golang-tutorial/">
+<link rel="stylesheet" href="/golang-tutorial/docs/base/20190409213349/">
 <link rel="stylesheet" href="https://hopher.github.io/golang-tutorial//css/github-markdown.css">
 <style>
   .github-markdown {
@@ -48,7 +46,7 @@
   
 
   <style>
-  nav ul a[href$="\2fgolang-tutorial\2f "] {
+  nav ul a[href$="\2fgolang-tutorial\2f docs\2f base\2f 20190409213349\2f "] {
       color: #004ed0;
   }
   </style><ul>
@@ -126,25 +124,29 @@
   <label for="menu-control">
     <img src="/golang-tutorial/svg/menu.svg" />
   </label>
-  <strong>
-    Introduction</strong>
+  <strong>15-切片</strong>
 </header>
 
       
-<article class="markdown"><p>Go 是一个开源的编程语言，它能让构造简单、可靠且高效的软件变得容易。</p>
+<article class="github-markdown">
+
+<h1 id="切片">切片</h1>
+
+<p>切片扩容时，会重新建立新的底层数组，内存重新分配内存储存空间, 然后把旧的数据复制到新的数组里, 时间复杂度O(n)
+切片长度 &gt;= 1024时, 以1.25倍进行扩容, 小于1024时则2倍扩容</p>
+
+<p>golang 官方文档在关于 slice 的 append 一节有说明：
+&gt; If the capacity of s is not large enough to fit the additional values, append allocates a new, sufficiently large underlying array that fits both the existing slice elements and the additional values. Otherwise, append re-uses the underlying array.</p>
+
+<p>也就是说，如果原来的底层数组足够大，能放的下 append 的数据，就不会新建底层数组。而如果不够的话，则会分配一个新的数组。也因此是 O(n) 的时间复杂度</p>
 </article>
 
       
-<div class="align-center book-git-footer justify-between">
-  
-  <div><a href="https://github.com/hopher/golang-tutorial/commit/28fefacc69f4b94e4be501c43f0f494b59a5b08d" title='Last modified Apr 9, 2019 by hopher' target="_blank" rel="noopener">
-      <img src="/golang-tutorial/svg/code-merge.svg" /> Apr 9, 2019
-    </a>
-  </div>
+<div class="align-center book-git-footer justify-end">
   
   
   <div>
-    <a href="https://github.com/hopher/golang-tutorial/edit/master/content/_index.md" target="_blank" rel="noopener">
+    <a href="https://github.com/hopher/golang-tutorial/edit/master/content/docs/base/15-%e5%88%87%e7%89%87.md" target="_blank" rel="noopener">
       <img src="/golang-tutorial/svg/code-fork.svg" /> Edit this page
     </a>
   </div>
@@ -175,6 +177,14 @@
     
   
   
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#切片">切片</a></li>
+</ul>
+</nav>
+  </aside>
+
 
 
 

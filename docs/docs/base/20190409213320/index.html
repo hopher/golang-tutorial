@@ -1,17 +1,15 @@
 <!DOCTYPE html><html>
 
 <head>
-	<meta name="generator" content="Hugo 0.55.0-DEV" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>
-    Introduction | Golang Tutorial</title>
+<title>12-数组 | Golang Tutorial</title>
 
 <link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
 <link rel="stylesheet" href="/golang-tutorial/normalize.min.css">
 
 <link rel="stylesheet" href="/golang-tutorial/book.min.b19e39655cbb35014c212261acf02c44c22b653e1183471f8513702b5bfd8f54.css">
-<link rel="stylesheet" href="/golang-tutorial/">
+<link rel="stylesheet" href="/golang-tutorial/docs/base/20190409213320/">
 <link rel="stylesheet" href="https://hopher.github.io/golang-tutorial//css/github-markdown.css">
 <style>
   .github-markdown {
@@ -48,7 +46,7 @@
   
 
   <style>
-  nav ul a[href$="\2fgolang-tutorial\2f "] {
+  nav ul a[href$="\2fgolang-tutorial\2f docs\2f base\2f 20190409213320\2f "] {
       color: #004ed0;
   }
   </style><ul>
@@ -126,25 +124,64 @@
   <label for="menu-control">
     <img src="/golang-tutorial/svg/menu.svg" />
   </label>
-  <strong>
-    Introduction</strong>
+  <strong>12-数组</strong>
 </header>
 
       
-<article class="markdown"><p>Go 是一个开源的编程语言，它能让构造简单、可靠且高效的软件变得容易。</p>
+<article class="github-markdown">
+
+<h1 id="数组">数组</h1>
+
+<p>数组声明</p>
+
+<pre><code>var balance [10] float32
+</code></pre>
+
+<p>初始化数组</p>
+
+<blockquote>
+<p>[&hellip;] 为不定长</p>
+</blockquote>
+
+<pre><code>var balance = [5]float32{1000.0, 2.0, 3.4, 7.0, 50.0}
+
+var balance = [...]float32{1000.0, 2.0, 3.4, 7.0, 50.0}
+</code></pre>
+
+<p>访问数组元素</p>
+
+<pre><code>var salary float32 = balance[9]
+</code></pre>
+
+<p>示例：</p>
+
+<pre><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+   var n [10]int /* n 是一个长度为 10 的数组 */
+   var i,j int
+
+   /* 为数组 n 初始化元素 */         
+   for i = 0; i &lt; 10; i++ {
+      n[i] = i + 100 /* 设置元素为 i + 100 */
+   }
+
+   /* 输出每个数组元素的值 */
+   for j = 0; j &lt; 10; j++ {
+      fmt.Printf(&quot;Element[%d] = %d\n&quot;, j, n[j] )
+   }
+}
+</code></pre>
 </article>
 
       
-<div class="align-center book-git-footer justify-between">
-  
-  <div><a href="https://github.com/hopher/golang-tutorial/commit/28fefacc69f4b94e4be501c43f0f494b59a5b08d" title='Last modified Apr 9, 2019 by hopher' target="_blank" rel="noopener">
-      <img src="/golang-tutorial/svg/code-merge.svg" /> Apr 9, 2019
-    </a>
-  </div>
+<div class="align-center book-git-footer justify-end">
   
   
   <div>
-    <a href="https://github.com/hopher/golang-tutorial/edit/master/content/_index.md" target="_blank" rel="noopener">
+    <a href="https://github.com/hopher/golang-tutorial/edit/master/content/docs/base/12-%e6%95%b0%e7%bb%84.md" target="_blank" rel="noopener">
       <img src="/golang-tutorial/svg/code-fork.svg" /> Edit this page
     </a>
   </div>
@@ -175,6 +212,14 @@
     
   
   
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li><a href="#数组">数组</a></li>
+</ul>
+</nav>
+  </aside>
+
 
 
 

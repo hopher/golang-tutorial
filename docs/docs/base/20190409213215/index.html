@@ -1,17 +1,15 @@
 <!DOCTYPE html><html>
 
 <head>
-	<meta name="generator" content="Hugo 0.55.0-DEV" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>
-    Introduction | Golang Tutorial</title>
+<title>04-数据类型 | Golang Tutorial</title>
 
 <link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
 <link rel="stylesheet" href="/golang-tutorial/normalize.min.css">
 
 <link rel="stylesheet" href="/golang-tutorial/book.min.b19e39655cbb35014c212261acf02c44c22b653e1183471f8513702b5bfd8f54.css">
-<link rel="stylesheet" href="/golang-tutorial/">
+<link rel="stylesheet" href="/golang-tutorial/docs/base/20190409213215/">
 <link rel="stylesheet" href="https://hopher.github.io/golang-tutorial//css/github-markdown.css">
 <style>
   .github-markdown {
@@ -48,7 +46,7 @@
   
 
   <style>
-  nav ul a[href$="\2fgolang-tutorial\2f "] {
+  nav ul a[href$="\2fgolang-tutorial\2f docs\2f base\2f 20190409213215\2f "] {
       color: #004ed0;
   }
   </style><ul>
@@ -126,25 +124,186 @@
   <label for="menu-control">
     <img src="/golang-tutorial/svg/menu.svg" />
   </label>
-  <strong>
-    Introduction</strong>
+  <strong>04-数据类型</strong>
 </header>
 
       
-<article class="markdown"><p>Go 是一个开源的编程语言，它能让构造简单、可靠且高效的软件变得容易。</p>
+<article class="github-markdown">
+
+<p><style>
+table th:first-of-type {
+    width: 60px;
+}
+</style></p>
+
+<h2 id="数据类型">数据类型</h2>
+
+<table>
+<thead>
+<tr>
+<th align="left">序号</th>
+<th align="left">类型和描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">1</td>
+<td align="left"><strong>布尔型</strong> 布尔型的值只可以是常量 true 或者 false。一个简单的例子：var b bool = true。</td>
+</tr>
+
+<tr>
+<td align="left">2</td>
+<td align="left"><strong>数字类型</strong> 整型 int 和浮点型 float32、float64，Go 语言支持整型和浮点型数字，并且支持复数，其中位的运算采用补码。</td>
+</tr>
+
+<tr>
+<td align="left">3</td>
+<td align="left"><strong>字符串类型:</strong> 字符串就是一串固定长度的字符连接起来的字符序列。Go 的字符串是由单个字节连接起来的。Go 语言的字符串的字节使用 UTF-8 编码标识 Unicode 文本。</td>
+</tr>
+
+<tr>
+<td align="left">4</td>
+<td align="left"><strong>派生类型:</strong><br>(a) 指针类型（Pointer）<br> (b) 数组类型<br> (c) 结构化类型(struct)<br> (d) Channel 类型<br> (e) 函数类型<br> (f) 切片类型<br> (g) 接口类型（interface)<br> (h) Map 类型</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="数字类型">数字类型</h2>
+
+<p>Go 也有基于架构的类型，例如：int、uint 和 uintptr。</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">序号</th>
+<th align="left">类型和描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">1</td>
+<td align="left"><strong>uint8</strong> 无符号 8 位整型 (0 到 255)</td>
+</tr>
+
+<tr>
+<td align="left">2</td>
+<td align="left"><strong>uint16</strong> 无符号 16 位整型 (0 到 65535)</td>
+</tr>
+
+<tr>
+<td align="left">3</td>
+<td align="left"><strong>uint32</strong> 无符号 32 位整型 (0 到 4294967295)</td>
+</tr>
+
+<tr>
+<td align="left">4</td>
+<td align="left"><strong>uint64</strong> 无符号 64 位整型 (0 到 18446744073709551615)</td>
+</tr>
+
+<tr>
+<td align="left">5</td>
+<td align="left"><strong>int8</strong> 有符号 8 位整型 (-128 到 127)</td>
+</tr>
+
+<tr>
+<td align="left">6</td>
+<td align="left"><strong>int16</strong> 有符号 16 位整型 (-32768 到 32767)</td>
+</tr>
+
+<tr>
+<td align="left">7</td>
+<td align="left"><strong>int32</strong> 有符号 32 位整型 (-2147483648 到 2147483647)</td>
+</tr>
+
+<tr>
+<td align="left">8</td>
+<td align="left"><strong>int64</strong> 有符号 64 位整型 (-9223372036854775808 到 9223372036854775807)</td>
+</tr>
+</tbody>
+</table>
+
+<p>浮点型：</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">序号</th>
+<th align="left">类型和描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">1</td>
+<td align="left"><strong>float32</strong> IEEE-754 32位浮点型数</td>
+</tr>
+
+<tr>
+<td align="left">2</td>
+<td align="left"><strong>float64</strong> IEEE-754 64位浮点型数</td>
+</tr>
+
+<tr>
+<td align="left">3</td>
+<td align="left"><strong>complex64</strong> 32 位实数和虚数</td>
+</tr>
+
+<tr>
+<td align="left">4</td>
+<td align="left"><strong>complex128</strong> 64 位实数和虚数</td>
+</tr>
+</tbody>
+</table>
+
+<h2 id="其他数字类型">其他数字类型</h2>
+
+<p>以下列出了其他更多的数字类型：</p>
+
+<table>
+<thead>
+<tr>
+<th align="left">序号</th>
+<th align="left">类型和描述</th>
+</tr>
+</thead>
+
+<tbody>
+<tr>
+<td align="left">1</td>
+<td align="left"><strong>byte</strong> 类似 uint8</td>
+</tr>
+
+<tr>
+<td align="left">2</td>
+<td align="left"><strong>rune</strong> 类似 int32</td>
+</tr>
+
+<tr>
+<td align="left">3</td>
+<td align="left"><strong>uint</strong> 32 或 64 位</td>
+</tr>
+
+<tr>
+<td align="left">4</td>
+<td align="left"><strong>int</strong> 与 uint 一样大小</td>
+</tr>
+
+<tr>
+<td align="left">5</td>
+<td align="left"><strong>uintptr</strong> 无符号整型，用于存放一个指针</td>
+</tr>
+</tbody>
+</table>
 </article>
 
       
-<div class="align-center book-git-footer justify-between">
-  
-  <div><a href="https://github.com/hopher/golang-tutorial/commit/28fefacc69f4b94e4be501c43f0f494b59a5b08d" title='Last modified Apr 9, 2019 by hopher' target="_blank" rel="noopener">
-      <img src="/golang-tutorial/svg/code-merge.svg" /> Apr 9, 2019
-    </a>
-  </div>
+<div class="align-center book-git-footer justify-end">
   
   
   <div>
-    <a href="https://github.com/hopher/golang-tutorial/edit/master/content/_index.md" target="_blank" rel="noopener">
+    <a href="https://github.com/hopher/golang-tutorial/edit/master/content/docs/base/04-%e6%95%b0%e6%8d%ae%e7%b1%bb%e5%9e%8b.md" target="_blank" rel="noopener">
       <img src="/golang-tutorial/svg/code-fork.svg" /> Edit this page
     </a>
   </div>

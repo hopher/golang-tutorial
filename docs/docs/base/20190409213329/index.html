@@ -1,17 +1,15 @@
 <!DOCTYPE html><html>
 
 <head>
-	<meta name="generator" content="Hugo 0.55.0-DEV" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>
-    Introduction | Golang Tutorial</title>
+<title>13-指针 | Golang Tutorial</title>
 
 <link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
 <link rel="stylesheet" href="/golang-tutorial/normalize.min.css">
 
 <link rel="stylesheet" href="/golang-tutorial/book.min.b19e39655cbb35014c212261acf02c44c22b653e1183471f8513702b5bfd8f54.css">
-<link rel="stylesheet" href="/golang-tutorial/">
+<link rel="stylesheet" href="/golang-tutorial/docs/base/20190409213329/">
 <link rel="stylesheet" href="https://hopher.github.io/golang-tutorial//css/github-markdown.css">
 <style>
   .github-markdown {
@@ -48,7 +46,7 @@
   
 
   <style>
-  nav ul a[href$="\2fgolang-tutorial\2f "] {
+  nav ul a[href$="\2fgolang-tutorial\2f docs\2f base\2f 20190409213329\2f "] {
       color: #004ed0;
   }
   </style><ul>
@@ -126,25 +124,45 @@
   <label for="menu-control">
     <img src="/golang-tutorial/svg/menu.svg" />
   </label>
-  <strong>
-    Introduction</strong>
+  <strong>13-指针</strong>
 </header>
 
       
-<article class="markdown"><p>Go 是一个开源的编程语言，它能让构造简单、可靠且高效的软件变得容易。</p>
+<article class="github-markdown">
+
+<h2 id="指针">指针</h2>
+
+<p>指针，返回的是内存地址空间 (十六进制)</p>
+
+<p>格式：<code>0xc000070010</code>, 开头的“0”令解析器更易辨认数，而“x”则代表十六进制</p>
+
+<blockquote>
+<p><strong>二进制</strong>
+数据在计算机中的表示，最终是以二进制的形式存在
+- 优点：更直观地解决
+- 缺点：太长，不容易思考，可以用更短的16进制表示</p>
+</blockquote>
+
+<p>指针一般用 <code>ptr</code> 表示</p>
+
+<pre><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+   var a int = 10
+   fmt.Printf(&quot;变量的地址: %v\n&quot;, &amp;a  )
+   fmt.Printf(&quot;变量的地址: %#x\n&quot;, &amp;a  )
+}
+</code></pre>
 </article>
 
       
-<div class="align-center book-git-footer justify-between">
-  
-  <div><a href="https://github.com/hopher/golang-tutorial/commit/28fefacc69f4b94e4be501c43f0f494b59a5b08d" title='Last modified Apr 9, 2019 by hopher' target="_blank" rel="noopener">
-      <img src="/golang-tutorial/svg/code-merge.svg" /> Apr 9, 2019
-    </a>
-  </div>
+<div class="align-center book-git-footer justify-end">
   
   
   <div>
-    <a href="https://github.com/hopher/golang-tutorial/edit/master/content/_index.md" target="_blank" rel="noopener">
+    <a href="https://github.com/hopher/golang-tutorial/edit/master/content/docs/base/13-%e6%8c%87%e9%92%88.md" target="_blank" rel="noopener">
       <img src="/golang-tutorial/svg/code-fork.svg" /> Edit this page
     </a>
   </div>
@@ -175,6 +193,17 @@
     
   
   
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#指针">指针</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
 
 
 

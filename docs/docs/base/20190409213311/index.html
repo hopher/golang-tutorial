@@ -1,17 +1,15 @@
 <!DOCTYPE html><html>
 
 <head>
-	<meta name="generator" content="Hugo 0.55.0-DEV" />
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>
-    Introduction | Golang Tutorial</title>
+<title>11-变量作用域 | Golang Tutorial</title>
 
 <link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
 <link rel="stylesheet" href="/golang-tutorial/normalize.min.css">
 
 <link rel="stylesheet" href="/golang-tutorial/book.min.b19e39655cbb35014c212261acf02c44c22b653e1183471f8513702b5bfd8f54.css">
-<link rel="stylesheet" href="/golang-tutorial/">
+<link rel="stylesheet" href="/golang-tutorial/docs/base/20190409213311/">
 <link rel="stylesheet" href="https://hopher.github.io/golang-tutorial//css/github-markdown.css">
 <style>
   .github-markdown {
@@ -48,7 +46,7 @@
   
 
   <style>
-  nav ul a[href$="\2fgolang-tutorial\2f "] {
+  nav ul a[href$="\2fgolang-tutorial\2f docs\2f base\2f 20190409213311\2f "] {
       color: #004ed0;
   }
   </style><ul>
@@ -126,25 +124,65 @@
   <label for="menu-control">
     <img src="/golang-tutorial/svg/menu.svg" />
   </label>
-  <strong>
-    Introduction</strong>
+  <strong>11-变量作用域</strong>
 </header>
 
       
-<article class="markdown"><p>Go 是一个开源的编程语言，它能让构造简单、可靠且高效的软件变得容易。</p>
+<article class="github-markdown">
+
+<h2 id="3种变量作用域">3种变量作用域</h2>
+
+<ul>
+<li>局部变量<br />
+作用域只在函数体内</li>
+
+<li><p>全局变量<br />
+全局变量可以在整个包 &amp;&amp; 外部包（被导出后）使用
+&gt; 外部包引用，变量要大写</p>
+
+<pre><code>import &quot;outside&quot;
+fmt.Printf(&quot;%s&quot;, outside.Name)
+</code></pre></li>
+
+<li><p>形式参数
+形式参数会作为函数的局部变量来使用。<br />
+<strong>示例</strong></p>
+
+<pre><code>package main
+
+import &quot;fmt&quot;
+
+/* 声明全局变量 */
+var a int = 20;
+
+func main() {
+/* main 函数中声明局部变量 */
+var a int = 10
+var b int = 20
+var c int = 0
+
+fmt.Printf(&quot;main()函数中 a = %d\n&quot;,  a);
+c = sum( a, b);
+fmt.Printf(&quot;main()函数中 c = %d\n&quot;,  c);
+}
+
+/* 函数定义-两数相加 */
+func sum(a, b int) int {
+fmt.Printf(&quot;sum() 函数中 a = %d\n&quot;,  a);
+fmt.Printf(&quot;sum() 函数中 b = %d\n&quot;,  b);
+
+return a + b;
+}  
+</code></pre></li>
+</ul>
 </article>
 
       
-<div class="align-center book-git-footer justify-between">
-  
-  <div><a href="https://github.com/hopher/golang-tutorial/commit/28fefacc69f4b94e4be501c43f0f494b59a5b08d" title='Last modified Apr 9, 2019 by hopher' target="_blank" rel="noopener">
-      <img src="/golang-tutorial/svg/code-merge.svg" /> Apr 9, 2019
-    </a>
-  </div>
+<div class="align-center book-git-footer justify-end">
   
   
   <div>
-    <a href="https://github.com/hopher/golang-tutorial/edit/master/content/_index.md" target="_blank" rel="noopener">
+    <a href="https://github.com/hopher/golang-tutorial/edit/master/content/docs/base/11-%e5%8f%98%e9%87%8f%e4%bd%9c%e7%94%a8%e5%9f%9f.md" target="_blank" rel="noopener">
       <img src="/golang-tutorial/svg/code-fork.svg" /> Edit this page
     </a>
   </div>
@@ -175,6 +213,17 @@
     
   
   
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#3种变量作用域">3种变量作用域</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
 
 
 
