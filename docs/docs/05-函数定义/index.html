@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>28 Xx | Golang Tutorial</title>
+<title>05 函数定义 | Golang Tutorial</title>
 
 <link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
 <link rel="stylesheet" href="/golang-tutorial/normalize.min.css">
 
 <link rel="stylesheet" href="/golang-tutorial/book.min.b19e39655cbb35014c212261acf02c44c22b653e1183471f8513702b5bfd8f54.css">
-<link rel="stylesheet" href="/golang-tutorial/docs/28-xx/">
+<link rel="stylesheet" href="/golang-tutorial/docs/05-%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89/">
 <link rel="stylesheet" href="https://hopher.github.io/golang-tutorial//css/github-markdown.css">
 <style>
   .github-markdown {
@@ -46,7 +46,7 @@
   
 
   <style>
-  nav ul a[href$="\2fgolang-tutorial\2f docs\2f 28-xx\2f "] {
+  nav ul a[href$="\2fgolang-tutorial\2f docs\2f 05-%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89\2f "] {
       color: #004ed0;
   }
   </style><ul>
@@ -124,23 +124,35 @@
   <label for="menu-control">
     <img src="/golang-tutorial/svg/menu.svg" />
   </label>
-  <strong>28 Xx</strong>
+  <strong>05 函数定义</strong>
 </header>
 
       
-<article class="github-markdown"></article>
+<article class="github-markdown"><p>正则用法：</p>
+
+<pre><code>/* 函数返回两个数的最大值 */
+func max(num1, num2 int) int {
+   /* 声明局部变量 */
+   var result int
+
+   if (num1 &gt; num2) {
+      result = num1
+   } else {
+      result = num2
+   }
+   return result 
+}
+</code></pre>
+
+<p>闭包：</p>
+</article>
 
       
-<div class="align-center book-git-footer justify-between">
-  
-  <div><a href="https://github.com/hopher/golang-tutorial/commit/2806e307361472e682a9304c149cf19082291ec6" title='Last modified Apr 8, 2019 by hopher' target="_blank" rel="noopener">
-      <img src="/golang-tutorial/svg/code-merge.svg" /> Apr 8, 2019
-    </a>
-  </div>
+<div class="align-center book-git-footer justify-end">
   
   
   <div>
-    <a href="https://github.com/hopher/golang-tutorial/edit/master/content/docs/28-xx.md" target="_blank" rel="noopener">
+    <a href="https://github.com/hopher/golang-tutorial/edit/master/content/docs/05-%e5%87%bd%e6%95%b0%e5%ae%9a%e4%b9%89.md" target="_blank" rel="noopener">
       <img src="/golang-tutorial/svg/code-fork.svg" /> Edit this page
     </a>
   </div>

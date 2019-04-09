@@ -11,37 +11,37 @@
     
     <item>
       <title></title>
-      <link>https://hopher.github.io/golang-tutorial/docs/00-xx/</link>
+      <link>https://hopher.github.io/golang-tutorial/docs/00-%E7%AE%80%E4%BB%8B/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://hopher.github.io/golang-tutorial/docs/00-xx/</guid>
-      <description>安装 使用docker，移植性好!!</description>
+      <guid>https://hopher.github.io/golang-tutorial/docs/00-%E7%AE%80%E4%BB%8B/</guid>
+      <description>简介 Go 是一个开源的编程语言，它能让构造简单、可靠且高效的软件变得容易。</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://hopher.github.io/golang-tutorial/docs/01-xx/</link>
+      <link>https://hopher.github.io/golang-tutorial/docs/01-%E5%AE%89%E8%A3%85/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://hopher.github.io/golang-tutorial/docs/01-xx/</guid>
-      <description>安装 使用docker，移植性好!!</description>
+      <guid>https://hopher.github.io/golang-tutorial/docs/01-%E5%AE%89%E8%A3%85/</guid>
+      <description> 安装 docker-compose 安装 </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://hopher.github.io/golang-tutorial/docs/02-xx/</link>
+      <link>https://hopher.github.io/golang-tutorial/docs/02-hello-world/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://hopher.github.io/golang-tutorial/docs/02-xx/</guid>
+      <guid>https://hopher.github.io/golang-tutorial/docs/02-hello-world/</guid>
       <description> Hello World 实例 package main import &amp;quot;fmt&amp;quot; func main() { fmt.Println(&amp;quot;Hello world&amp;quot;) }  </description>
     </item>
     
     <item>
       <title></title>
-      <link>https://hopher.github.io/golang-tutorial/docs/03-xx/</link>
+      <link>https://hopher.github.io/golang-tutorial/docs/03-%E5%8F%98%E9%87%8F/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://hopher.github.io/golang-tutorial/docs/03-xx/</guid>
+      <guid>https://hopher.github.io/golang-tutorial/docs/03-%E5%8F%98%E9%87%8F/</guid>
       <description>3种变量声明方式  无初始化, 指定变量类型 var 类型推断 短变量声明 :=  示例
 package main import &amp;quot;fmt&amp;quot; func main() { // 1. 无初始化, 指定变量类型 var name string var age int fmt.Printf(&amp;quot;%q %d\n&amp;quot;, name, age) // 输出结果 // &amp;quot;&amp;quot; 0 // 2. var 类型推断 var name2 = &amp;quot;gopher2&amp;quot; fmt.Printf(&amp;quot;%s\n&amp;quot;, name2) // 输出结果 // gopher2 // 3. 短变量声明 := name3 := &amp;quot;gopher3&amp;quot; fmt.Printf(&amp;quot;%s\n&amp;quot;, name3) // 输出结果 // gopher3 }  3种变量作用域  局部变量
 作用域只在函数体内 全局变量</description>
@@ -49,10 +49,10 @@ package main import &amp;quot;fmt&amp;quot; func main() { // 1. 无初始化, �
     
     <item>
       <title></title>
-      <link>https://hopher.github.io/golang-tutorial/docs/04-xx/</link>
+      <link>https://hopher.github.io/golang-tutorial/docs/04-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://hopher.github.io/golang-tutorial/docs/04-xx/</guid>
+      <guid>https://hopher.github.io/golang-tutorial/docs/04-%E6%95%B0%E6%8D%AE%E7%B1%BB%E5%9E%8B/</guid>
       <description>table th:first-of-type { width: 60px; } 
 数据类型    序号 类型和描述     1 布尔型 布尔型的值只可以是常量 true 或者 false。一个简单的例子：var b bool = true。   2 数字类型 整型 int 和浮点型 float32、float64，Go 语言支持整型和浮点型数字，并且支持复数，其中位的运算采用补码。   3 字符串类型: 字符串就是一串固定长度的字符连接起来的字符序列。Go 的字符串是由单个字节连接起来的。Go 语言的字符串的字节使用 UTF-8 编码标识 Unicode 文本。   4 派生类型:
 (a) 指针类型（Pointer）
@@ -67,20 +67,20 @@ package main import &amp;quot;fmt&amp;quot; func main() { // 1. 无初始化, �
     
     <item>
       <title></title>
-      <link>https://hopher.github.io/golang-tutorial/docs/05-xx/</link>
+      <link>https://hopher.github.io/golang-tutorial/docs/05-%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://hopher.github.io/golang-tutorial/docs/05-xx/</guid>
+      <guid>https://hopher.github.io/golang-tutorial/docs/05-%E5%87%BD%E6%95%B0%E5%AE%9A%E4%B9%89/</guid>
       <description>正则用法：
 /* 函数返回两个数的最大值 */ func max(num1, num2 int) int { /* 声明局部变量 */ var result int if (num1 &amp;gt; num2) { result = num1 } else { result = num2 } return result }  闭包：</description>
     </item>
     
     <item>
       <title></title>
-      <link>https://hopher.github.io/golang-tutorial/docs/06-xx/</link>
+      <link>https://hopher.github.io/golang-tutorial/docs/06-%E6%95%B0%E7%BB%84/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://hopher.github.io/golang-tutorial/docs/06-xx/</guid>
+      <guid>https://hopher.github.io/golang-tutorial/docs/06-%E6%95%B0%E7%BB%84/</guid>
       <description>数组 数组声明
 var balance [10] float32  初始化数组
  [&amp;hellip;] 为不定长
@@ -91,73 +91,77 @@ package main import &amp;quot;fmt&amp;quot; func main() { var n [10]int /* n 是
     
     <item>
       <title></title>
-      <link>https://hopher.github.io/golang-tutorial/docs/07-xx/</link>
+      <link>https://hopher.github.io/golang-tutorial/docs/07-%E6%8C%87%E9%92%88/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://hopher.github.io/golang-tutorial/docs/07-xx/</guid>
+      <guid>https://hopher.github.io/golang-tutorial/docs/07-%E6%8C%87%E9%92%88/</guid>
+      <description> 指针 指针，返回的是内存地址空间 (十六进制)
+格式：0xc000070010, 开头的“0”令解析器更易辨认数，而“x”则代表十六进制
+ 二进制 数据在计算机中的表示，最终是以二进制的形式存在 - 优点：更直观地解决 - 缺点：太长，不容易思考，可以用更短的16进制表示
+ 指针一般用 ptr 表示
+package main import &amp;quot;fmt&amp;quot; func main() { var a int = 10 fmt.Printf(&amp;quot;变量的地址: %v\n&amp;quot;, &amp;amp;a ) fmt.Printf(&amp;quot;变量的地址: %#x\n&amp;quot;, &amp;amp;a ) }  </description>
+    </item>
+    
+    <item>
+      <title></title>
+      <link>https://hopher.github.io/golang-tutorial/docs/08-%E7%BB%93%E6%9E%84%E4%BD%93/</link>
+      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
+      
+      <guid>https://hopher.github.io/golang-tutorial/docs/08-%E7%BB%93%E6%9E%84%E4%BD%93/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://hopher.github.io/golang-tutorial/docs/08-xx/</link>
+      <link>https://hopher.github.io/golang-tutorial/docs/09-%E5%88%87%E7%89%87/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://hopher.github.io/golang-tutorial/docs/08-xx/</guid>
+      <guid>https://hopher.github.io/golang-tutorial/docs/09-%E5%88%87%E7%89%87/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://hopher.github.io/golang-tutorial/docs/09-xx/</link>
+      <link>https://hopher.github.io/golang-tutorial/docs/10-%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://hopher.github.io/golang-tutorial/docs/09-xx/</guid>
+      <guid>https://hopher.github.io/golang-tutorial/docs/10-%E6%9D%A1%E4%BB%B6%E8%AF%AD%E5%8F%A5/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://hopher.github.io/golang-tutorial/docs/10-xx/</link>
+      <link>https://hopher.github.io/golang-tutorial/docs/11-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://hopher.github.io/golang-tutorial/docs/10-xx/</guid>
+      <guid>https://hopher.github.io/golang-tutorial/docs/11-%E5%BC%82%E5%B8%B8%E5%A4%84%E7%90%86/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://hopher.github.io/golang-tutorial/docs/11-xx/</link>
+      <link>https://hopher.github.io/golang-tutorial/docs/12-%E7%A8%8B%E5%BA%8F%E6%B5%8B%E8%AF%95/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://hopher.github.io/golang-tutorial/docs/11-xx/</guid>
+      <guid>https://hopher.github.io/golang-tutorial/docs/12-%E7%A8%8B%E5%BA%8F%E6%B5%8B%E8%AF%95/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://hopher.github.io/golang-tutorial/docs/12-xx/</link>
+      <link>https://hopher.github.io/golang-tutorial/docs/13-goroutine/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://hopher.github.io/golang-tutorial/docs/12-xx/</guid>
+      <guid>https://hopher.github.io/golang-tutorial/docs/13-goroutine/</guid>
       <description></description>
     </item>
     
     <item>
       <title></title>
-      <link>https://hopher.github.io/golang-tutorial/docs/13-xx/</link>
+      <link>https://hopher.github.io/golang-tutorial/docs/14-channel/</link>
       <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
       
-      <guid>https://hopher.github.io/golang-tutorial/docs/13-xx/</guid>
-      <description></description>
-    </item>
-    
-    <item>
-      <title></title>
-      <link>https://hopher.github.io/golang-tutorial/docs/14-xx/</link>
-      <pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate>
-      
-      <guid>https://hopher.github.io/golang-tutorial/docs/14-xx/</guid>
+      <guid>https://hopher.github.io/golang-tutorial/docs/14-channel/</guid>
       <description></description>
     </item>
     

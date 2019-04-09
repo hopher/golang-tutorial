@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>With Toc | Golang Tutorial</title>
+<title>03 变量 | Golang Tutorial</title>
 
 <link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
 <link rel="stylesheet" href="/golang-tutorial/normalize.min.css">
 
 <link rel="stylesheet" href="/golang-tutorial/book.min.b19e39655cbb35014c212261acf02c44c22b653e1183471f8513702b5bfd8f54.css">
-<link rel="stylesheet" href="/golang-tutorial/docs/with-toc/">
+<link rel="stylesheet" href="/golang-tutorial/docs/03-%E5%8F%98%E9%87%8F/">
 <link rel="stylesheet" href="https://hopher.github.io/golang-tutorial//css/github-markdown.css">
 <style>
   .github-markdown {
@@ -46,7 +46,7 @@
   
 
   <style>
-  nav ul a[href$="\2fgolang-tutorial\2f docs\2fwith-toc\2f "] {
+  nav ul a[href$="\2fgolang-tutorial\2f docs\2f 03-%E5%8F%98%E9%87%8F\2f "] {
       color: #004ed0;
   }
   </style><ul>
@@ -124,89 +124,145 @@
   <label for="menu-control">
     <img src="/golang-tutorial/svg/menu.svg" />
   </label>
-  <strong>With Toc</strong>
+  <strong>03 变量</strong>
 </header>
 
       
 <article class="github-markdown">
 
-<h1 id="caput-vino-delphine-in-tamen-vias">Caput vino delphine in tamen vias</h1>
-
-<h2 id="cognita-laeva-illo-fracta">Cognita laeva illo fracta</h2>
-
-<p>Lorem markdownum pavent auras, surgit nunc cingentibus libet <strong>Laomedonque que</strong>
-est. Pastor <a href="http://est.org/ire.aspx">An</a> arbor filia foedat, ne <a href="http://www.indiciumturbam.org/moramquid.php">fugit
-aliter</a>, per. Helicona illas et
-callida neptem est <em>Oresitrophos</em> caput, dentibus est venit. Tenet reddite
-<a href="http://www.antro-et.net/">famuli</a> praesentem fortibus, quaeque vis foret si
-frondes <em>gelidos</em> gravidae circumtulit <a href="http://incurvasustulit.io/illi-virtute.html">inpulit armenta
-nativum</a>.</p>
+<h2 id="3种变量声明方式">3种变量声明方式</h2>
 
 <ol>
-<li>Te at cruciabere vides rubentis manebo</li>
-<li>Maturuit in praetemptat ruborem ignara postquam habitasse</li>
-<li>Subitarum supplevit quoque fontesque venabula spretis modo</li>
-<li>Montis tot est mali quasque gravis</li>
-<li>Quinquennem domus arsit ipse</li>
-<li>Pellem turis pugnabant locavit</li>
+<li>无初始化, 指定变量类型</li>
+<li><code>var</code> 类型推断</li>
+<li>短变量声明 <code>:=</code></li>
 </ol>
 
-<h2 id="natus-quaerere">Natus quaerere</h2>
+<p><strong>示例</strong></p>
 
-<p>Pectora et sine mulcere, coniuge dum tincta incurvae. Quis iam; est dextra
-Peneosque, metuis a verba, primo. Illa sed colloque suis: magno: gramen, aera
-excutiunt concipit.</p>
+<pre><code>package main
 
-<blockquote>
-<p>Phrygiae petendo suisque extimuit, super, pars quod audet! Turba negarem.
-Fuerat attonitus; et dextra retinet sidera ulnas undas instimulat vacuae
-generis? <em>Agnus</em> dabat et ignotis dextera, sic tibi pacis <strong>feriente at mora</strong>
-euhoeque <em>comites hostem</em> vestras Phineus. Vultuque sanguine dominoque <a href="http://iuvat.org/eundem.php">metuit
-risi</a> fama vergit summaque meus clarissimus
-artesque tinguebat successor nominis cervice caelicolae.</p>
-</blockquote>
+import &quot;fmt&quot;
 
-<h2 id="limitibus-misere-sit">Limitibus misere sit</h2>
+func main() {
+    // 1. 无初始化, 指定变量类型
+    var name string
+    var age int
+    fmt.Printf(&quot;%q %d\n&quot;, name, age)
+    // 输出结果
+    // &quot;&quot; 0
 
-<p>Aurea non fata repertis praerupit feruntur simul, meae hosti lentaque <em>citius
-levibus</em>, cum sede dixit, Phaethon texta. <em>Albentibus summos</em> multifidasque
-iungitur loquendi an pectore, mihi ursaque omnia adfata, aeno parvumque in animi
-perlucentes. Epytus agis ait vixque clamat ornum adversam spondet, quid sceptra
-ipsum <strong>est</strong>. Reseret nec; saeva suo passu debentia linguam terga et aures et
-cervix <a href="http://www.amnem.io/pervenit.aspx">de</a> ubera. Coercet gelidumque manus,
-doluit volvitur induta?</p>
+    // 2. var 类型推断
+    var name2 = &quot;gopher2&quot;
+    fmt.Printf(&quot;%s\n&quot;, name2)
+    // 输出结果
+    // gopher2
 
-<h2 id="enim-sua">Enim sua</h2>
+    // 3. 短变量声明 :=
+    name3 := &quot;gopher3&quot;
+    fmt.Printf(&quot;%s\n&quot;, name3)
+    // 输出结果
+    // gopher3
+}
+</code></pre>
 
-<p>Iuvenilior filia inlustre templa quidem herbis permittat trahens huic. In
-cruribus proceres sole crescitque <em>fata</em>, quos quos; merui maris se non tamen
-in, mea.</p>
+<h2 id="3种变量作用域">3种变量作用域</h2>
 
-<h2 id="germana-aves-pignus-tecta">Germana aves pignus tecta</h2>
+<ul>
+<li>局部变量<br />
+作用域只在函数体内</li>
 
-<p>Mortalia rudibusque caelum cognosceret tantum aquis redito felicior texit, nec,
-aris parvo acre. Me parum contulerant multi tenentem, gratissime suis; vultum tu
-occupat deficeret corpora, sonum. E Actaea inplevit Phinea concepit nomenque
-potest sanguine captam nulla et, in duxisses campis non; mercede. Dicere cur
-Leucothoen obitum?</p>
+<li><p>全局变量<br />
+全局变量可以在整个包 &amp;&amp; 外部包（被导出后）使用
+&gt; 外部包引用，变量要大写</p>
 
-<p>Postibus mittam est <em>nubibus principium pluma</em>, exsecratur facta et. Iunge
-Mnemonidas pallamque pars; vere restitit alis flumina quae <strong>quoque</strong>, est
-ignara infestus Pyrrha. Di ducis terris maculatum At sede praemia manes
-nullaque!</p>
+<pre><code>import &quot;outside&quot;
+fmt.Printf(&quot;%s&quot;, outside.Name)
+</code></pre></li>
+
+<li><p>形式参数</p></li>
+</ul>
+
+<p><strong>局部变量</strong></p>
+
+<pre><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+   /* 声明局部变量 */
+   var a, b, c int 
+
+   /* 初始化参数 */
+   a = 10
+   b = 20
+   c = a + b
+
+   fmt.Printf (&quot;结果： a = %d, b = %d and c = %d\n&quot;, a, b, c)
+}
+</code></pre>
+
+<p><strong>全局变量</strong></p>
+
+<pre><code>package main
+
+import &quot;fmt&quot;
+
+/* 声明全局变量 */
+var g int
+
+func main() {
+
+   /* 声明局部变量 */
+   var a, b int
+
+   /* 初始化参数 */
+   a = 10
+   b = 20
+   g = a + b
+
+   fmt.Printf(&quot;结果： a = %d, b = %d and g = %d\n&quot;, a, b, g)
+}
+</code></pre>
+
+<p><strong>形式参数</strong></p>
+
+<p>形式参数会作为函数的局部变量来使用。实例如下：</p>
+
+<pre><code>package main
+
+import &quot;fmt&quot;
+
+/* 声明全局变量 */
+var a int = 20;
+
+func main() {
+   /* main 函数中声明局部变量 */
+   var a int = 10
+   var b int = 20
+   var c int = 0
+
+   fmt.Printf(&quot;main()函数中 a = %d\n&quot;,  a);
+   c = sum( a, b);
+   fmt.Printf(&quot;main()函数中 c = %d\n&quot;,  c);
+}
+
+/* 函数定义-两数相加 */
+func sum(a, b int) int {
+   fmt.Printf(&quot;sum() 函数中 a = %d\n&quot;,  a);
+   fmt.Printf(&quot;sum() 函数中 b = %d\n&quot;,  b);
+
+   return a + b;
+}
+</code></pre>
 </article>
 
       
-<div class="align-center book-git-footer justify-between">
-  
-  <div><a href="https://github.com/hopher/golang-tutorial/commit/5a6cac60611db40e24258aa88c33129254ed16ba" title='Last modified Apr 8, 2019 by hopher' target="_blank" rel="noopener">
-      <img src="/golang-tutorial/svg/code-merge.svg" /> Apr 8, 2019
-    </a>
-  </div>
+<div class="align-center book-git-footer justify-end">
   
   
   <div>
-    <a href="https://github.com/hopher/golang-tutorial/edit/master/content/docs/with-toc.md" target="_blank" rel="noopener">
+    <a href="https://github.com/hopher/golang-tutorial/edit/master/content/docs/03-%e5%8f%98%e9%87%8f.md" target="_blank" rel="noopener">
       <img src="/golang-tutorial/svg/code-fork.svg" /> Edit this page
     </a>
   </div>
@@ -240,13 +296,10 @@ nullaque!</p>
   <aside class="book-toc fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#caput-vino-delphine-in-tamen-vias">Caput vino delphine in tamen vias</a>
+<li>
 <ul>
-<li><a href="#cognita-laeva-illo-fracta">Cognita laeva illo fracta</a></li>
-<li><a href="#natus-quaerere">Natus quaerere</a></li>
-<li><a href="#limitibus-misere-sit">Limitibus misere sit</a></li>
-<li><a href="#enim-sua">Enim sua</a></li>
-<li><a href="#germana-aves-pignus-tecta">Germana aves pignus tecta</a></li>
+<li><a href="#3种变量声明方式">3种变量声明方式</a></li>
+<li><a href="#3种变量作用域">3种变量作用域</a></li>
 </ul></li>
 </ul>
 </nav>

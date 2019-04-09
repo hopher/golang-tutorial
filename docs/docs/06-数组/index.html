@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>With Toc | Golang Tutorial</title>
+<title>06 数组 | Golang Tutorial</title>
 
 <link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
 <link rel="stylesheet" href="/golang-tutorial/normalize.min.css">
 
 <link rel="stylesheet" href="/golang-tutorial/book.min.b19e39655cbb35014c212261acf02c44c22b653e1183471f8513702b5bfd8f54.css">
-<link rel="stylesheet" href="/golang-tutorial/docs/with-toc/">
+<link rel="stylesheet" href="/golang-tutorial/docs/06-%E6%95%B0%E7%BB%84/">
 <link rel="stylesheet" href="https://hopher.github.io/golang-tutorial//css/github-markdown.css">
 <style>
   .github-markdown {
@@ -46,7 +46,7 @@
   
 
   <style>
-  nav ul a[href$="\2fgolang-tutorial\2f docs\2fwith-toc\2f "] {
+  nav ul a[href$="\2fgolang-tutorial\2f docs\2f 06-%E6%95%B0%E7%BB%84\2f "] {
       color: #004ed0;
   }
   </style><ul>
@@ -124,89 +124,64 @@
   <label for="menu-control">
     <img src="/golang-tutorial/svg/menu.svg" />
   </label>
-  <strong>With Toc</strong>
+  <strong>06 数组</strong>
 </header>
 
       
 <article class="github-markdown">
 
-<h1 id="caput-vino-delphine-in-tamen-vias">Caput vino delphine in tamen vias</h1>
+<h1 id="数组">数组</h1>
 
-<h2 id="cognita-laeva-illo-fracta">Cognita laeva illo fracta</h2>
+<p>数组声明</p>
 
-<p>Lorem markdownum pavent auras, surgit nunc cingentibus libet <strong>Laomedonque que</strong>
-est. Pastor <a href="http://est.org/ire.aspx">An</a> arbor filia foedat, ne <a href="http://www.indiciumturbam.org/moramquid.php">fugit
-aliter</a>, per. Helicona illas et
-callida neptem est <em>Oresitrophos</em> caput, dentibus est venit. Tenet reddite
-<a href="http://www.antro-et.net/">famuli</a> praesentem fortibus, quaeque vis foret si
-frondes <em>gelidos</em> gravidae circumtulit <a href="http://incurvasustulit.io/illi-virtute.html">inpulit armenta
-nativum</a>.</p>
+<pre><code>var balance [10] float32
+</code></pre>
 
-<ol>
-<li>Te at cruciabere vides rubentis manebo</li>
-<li>Maturuit in praetemptat ruborem ignara postquam habitasse</li>
-<li>Subitarum supplevit quoque fontesque venabula spretis modo</li>
-<li>Montis tot est mali quasque gravis</li>
-<li>Quinquennem domus arsit ipse</li>
-<li>Pellem turis pugnabant locavit</li>
-</ol>
-
-<h2 id="natus-quaerere">Natus quaerere</h2>
-
-<p>Pectora et sine mulcere, coniuge dum tincta incurvae. Quis iam; est dextra
-Peneosque, metuis a verba, primo. Illa sed colloque suis: magno: gramen, aera
-excutiunt concipit.</p>
+<p>初始化数组</p>
 
 <blockquote>
-<p>Phrygiae petendo suisque extimuit, super, pars quod audet! Turba negarem.
-Fuerat attonitus; et dextra retinet sidera ulnas undas instimulat vacuae
-generis? <em>Agnus</em> dabat et ignotis dextera, sic tibi pacis <strong>feriente at mora</strong>
-euhoeque <em>comites hostem</em> vestras Phineus. Vultuque sanguine dominoque <a href="http://iuvat.org/eundem.php">metuit
-risi</a> fama vergit summaque meus clarissimus
-artesque tinguebat successor nominis cervice caelicolae.</p>
+<p>[&hellip;] 为不定长</p>
 </blockquote>
 
-<h2 id="limitibus-misere-sit">Limitibus misere sit</h2>
+<pre><code>var balance = [5]float32{1000.0, 2.0, 3.4, 7.0, 50.0}
 
-<p>Aurea non fata repertis praerupit feruntur simul, meae hosti lentaque <em>citius
-levibus</em>, cum sede dixit, Phaethon texta. <em>Albentibus summos</em> multifidasque
-iungitur loquendi an pectore, mihi ursaque omnia adfata, aeno parvumque in animi
-perlucentes. Epytus agis ait vixque clamat ornum adversam spondet, quid sceptra
-ipsum <strong>est</strong>. Reseret nec; saeva suo passu debentia linguam terga et aures et
-cervix <a href="http://www.amnem.io/pervenit.aspx">de</a> ubera. Coercet gelidumque manus,
-doluit volvitur induta?</p>
+var balance = [...]float32{1000.0, 2.0, 3.4, 7.0, 50.0}
+</code></pre>
 
-<h2 id="enim-sua">Enim sua</h2>
+<p>访问数组元素</p>
 
-<p>Iuvenilior filia inlustre templa quidem herbis permittat trahens huic. In
-cruribus proceres sole crescitque <em>fata</em>, quos quos; merui maris se non tamen
-in, mea.</p>
+<pre><code>var salary float32 = balance[9]
+</code></pre>
 
-<h2 id="germana-aves-pignus-tecta">Germana aves pignus tecta</h2>
+<p>示例：</p>
 
-<p>Mortalia rudibusque caelum cognosceret tantum aquis redito felicior texit, nec,
-aris parvo acre. Me parum contulerant multi tenentem, gratissime suis; vultum tu
-occupat deficeret corpora, sonum. E Actaea inplevit Phinea concepit nomenque
-potest sanguine captam nulla et, in duxisses campis non; mercede. Dicere cur
-Leucothoen obitum?</p>
+<pre><code>package main
 
-<p>Postibus mittam est <em>nubibus principium pluma</em>, exsecratur facta et. Iunge
-Mnemonidas pallamque pars; vere restitit alis flumina quae <strong>quoque</strong>, est
-ignara infestus Pyrrha. Di ducis terris maculatum At sede praemia manes
-nullaque!</p>
+import &quot;fmt&quot;
+
+func main() {
+   var n [10]int /* n 是一个长度为 10 的数组 */
+   var i,j int
+
+   /* 为数组 n 初始化元素 */         
+   for i = 0; i &lt; 10; i++ {
+      n[i] = i + 100 /* 设置元素为 i + 100 */
+   }
+
+   /* 输出每个数组元素的值 */
+   for j = 0; j &lt; 10; j++ {
+      fmt.Printf(&quot;Element[%d] = %d\n&quot;, j, n[j] )
+   }
+}
+</code></pre>
 </article>
 
       
-<div class="align-center book-git-footer justify-between">
-  
-  <div><a href="https://github.com/hopher/golang-tutorial/commit/5a6cac60611db40e24258aa88c33129254ed16ba" title='Last modified Apr 8, 2019 by hopher' target="_blank" rel="noopener">
-      <img src="/golang-tutorial/svg/code-merge.svg" /> Apr 8, 2019
-    </a>
-  </div>
+<div class="align-center book-git-footer justify-end">
   
   
   <div>
-    <a href="https://github.com/hopher/golang-tutorial/edit/master/content/docs/with-toc.md" target="_blank" rel="noopener">
+    <a href="https://github.com/hopher/golang-tutorial/edit/master/content/docs/06-%e6%95%b0%e7%bb%84.md" target="_blank" rel="noopener">
       <img src="/golang-tutorial/svg/code-fork.svg" /> Edit this page
     </a>
   </div>
@@ -240,14 +215,7 @@ nullaque!</p>
   <aside class="book-toc fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#caput-vino-delphine-in-tamen-vias">Caput vino delphine in tamen vias</a>
-<ul>
-<li><a href="#cognita-laeva-illo-fracta">Cognita laeva illo fracta</a></li>
-<li><a href="#natus-quaerere">Natus quaerere</a></li>
-<li><a href="#limitibus-misere-sit">Limitibus misere sit</a></li>
-<li><a href="#enim-sua">Enim sua</a></li>
-<li><a href="#germana-aves-pignus-tecta">Germana aves pignus tecta</a></li>
-</ul></li>
+<li><a href="#数组">数组</a></li>
 </ul>
 </nav>
   </aside>
