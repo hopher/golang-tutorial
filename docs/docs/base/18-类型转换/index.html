@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Getting Started with Hugo | Golang Tutorial</title>
+<title>18 类型转换 | Golang Tutorial</title>
 
 <link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
 <link rel="stylesheet" href="/golang-tutorial/normalize.min.css">
 
 <link rel="stylesheet" href="/golang-tutorial/book.min.b19e39655cbb35014c212261acf02c44c22b653e1183471f8513702b5bfd8f54.css">
-<link rel="stylesheet" href="/golang-tutorial/posts/hugoisforlovers/">
+<link rel="stylesheet" href="/golang-tutorial/docs/base/18-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/">
 <link rel="stylesheet" href="https://hopher.github.io/golang-tutorial//css/github-markdown.css">
 <style>
   .github-markdown {
@@ -32,6 +32,7 @@
 <body>
   <input type="checkbox" style="display: none" id="menu-control" />
   <main class="flex container">
+
     <aside class="book-menu fixed">
       <nav role="navigation">
 <h2 class="book-brand">
@@ -45,7 +46,7 @@
   
 
   <style>
-  nav ul a[href$="\2fgolang-tutorial\2fposts\2fhugoisforlovers\2f "] {
+  nav ul a[href$="\2fgolang-tutorial\2f docs\2f base\2f 18-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2\2f "] {
       color: #004ed0;
   }
   </style><ul>
@@ -130,106 +131,64 @@
 </nav>
     </aside>
 
-    <div class="book-posts">
+    <div class="book-page">
       <header class="align-center justify-between book-header">
   <label for="menu-control">
     <img src="/golang-tutorial/svg/menu.svg" />
   </label>
-  <strong>Getting Started with Hugo</strong>
+  <strong>18 类型转换</strong>
 </header>
 
-      <header>
-  <h1>Getting Started with Hugo</h1>
-  <h5>
-    <strong>Apr 2, 2014</strong>
-  </h5>
-</header>
-<article class="markdown">
+      
+<article class="github-markdown"></article>
 
-<h2 id="step-1-install-hugo">Step 1. Install Hugo</h2>
+      
+<div class="align-center book-git-footer justify-end">
+  
+  
+  <div>
+    <a href="https://github.com/hopher/golang-tutorial/edit/master/content/docs/base/18-%e7%b1%bb%e5%9e%8b%e8%bd%ac%e6%8d%a2.md" target="_blank" rel="noopener">
+      <img src="/golang-tutorial/svg/code-fork.svg" /> Edit this page
+    </a>
+  </div>
+  
+</div>
 
-<p>Go to <a href="https://github.com/spf13/hugo/releases">Hugo releases</a> and download the
-appropriate version for your OS and architecture.</p>
 
-<p>Save it somewhere specific as we will be using it in the next step.</p>
 
-<p>More complete instructions are available at <a href="https://gohugo.io/getting-started/installing/">Install Hugo</a></p>
-
-<h2 id="step-2-build-the-docs">Step 2. Build the Docs</h2>
-
-<p>Hugo has its own example site which happens to also be the documentation site
-you are reading right now.</p>
-
-<p>Follow the following steps:</p>
-
-<ol>
-<li>Clone the <a href="http://github.com/spf13/hugo">Hugo repository</a></li>
-<li>Go into the repo</li>
-<li>Run hugo in server mode and build the docs</li>
-<li>Open your browser to <a href="http://localhost:1313">http://localhost:1313</a></li>
-</ol>
-
-<p>Corresponding pseudo commands:</p>
-
-<pre><code>git clone https://github.com/spf13/hugo
-cd hugo
-/path/to/where/you/installed/hugo server --source=./docs
-&gt; 29 pages created
-&gt; 0 tags index created
-&gt; in 27 ms
-&gt; Web Server is available at http://localhost:1313
-&gt; Press ctrl+c to stop
-</code></pre>
-
-<p>Once you&rsquo;ve gotten here, follow along the rest of this page on your local build.</p>
-
-<h2 id="step-3-change-the-docs-site">Step 3. Change the docs site</h2>
-
-<p>Stop the Hugo process by hitting Ctrl+C.</p>
-
-<p>Now we are going to run hugo again, but this time with hugo in watch mode.</p>
-
-<pre><code>/path/to/hugo/from/step/1/hugo server --source=./docs --watch
-&gt; 29 pages created
-&gt; 0 tags index created
-&gt; in 27 ms
-&gt; Web Server is available at http://localhost:1313
-&gt; Watching for changes in /Users/spf13/Code/hugo/docs/content
-&gt; Press ctrl+c to stop
-</code></pre>
-
-<p>Open your <a href="http://vim.spf13.com">favorite editor</a> and change one of the source
-content pages. How about changing this very file to <em>fix the typo</em>. How about changing this very file to <em>fix the typo</em>.</p>
-
-<p>Content files are found in <code>docs/content/</code>. Unless otherwise specified, files
-are located at the same relative location as the url, in our case
-<code>docs/content/overview/quickstart.md</code>.</p>
-
-<p>Change and save this file.. Notice what happened in your terminal.</p>
-
-<pre><code>&gt; Change detected, rebuilding site
-
-&gt; 29 pages created
-&gt; 0 tags index created
-&gt; in 26 ms
-</code></pre>
-
-<p>Refresh the browser and observe that the typo is now fixed.</p>
-
-<p>Notice how quick that was. Try to refresh the site before it&rsquo;s finished building. I double dare you.
-Having nearly instant feedback enables you to have your creativity flow without waiting for long builds.</p>
-
-<h2 id="step-4-have-fun">Step 4. Have fun</h2>
-
-<p>The best way to learn something is to play with it.</p>
-</article>
-
+      
+      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<div id="gitalk-container"></div>
+<script>
+  var gitalk = new Gitalk({
+    clientID: '7dcb43fc92a2d46503f6',
+    clientSecret: 'e5bc998d14341e50ba879cf3af7a5c2133e787a9',
+    repo: 'golang-tutorial',
+    owner: 'hopher',
+    admin: ['hopher'],
+    id: location.pathname,      
+    distractionFreeMode: false  
+  })
+  gitalk.render('gitalk-container')  
+</script>
+            
     </div>
-  </main>
+
+    
   
+  
+
+
+
+ 
+  </main>
 
   
   
+
+
+
 </body>
 
 </html>

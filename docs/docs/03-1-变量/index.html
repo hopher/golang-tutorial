@@ -3,13 +3,13 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>Getting Started with Hugo | Golang Tutorial</title>
+<title>03 1 变量 | Golang Tutorial</title>
 
 <link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
 <link rel="stylesheet" href="/golang-tutorial/normalize.min.css">
 
 <link rel="stylesheet" href="/golang-tutorial/book.min.b19e39655cbb35014c212261acf02c44c22b653e1183471f8513702b5bfd8f54.css">
-<link rel="stylesheet" href="/golang-tutorial/posts/hugoisforlovers/">
+<link rel="stylesheet" href="/golang-tutorial/docs/03-1-%E5%8F%98%E9%87%8F/">
 <link rel="stylesheet" href="https://hopher.github.io/golang-tutorial//css/github-markdown.css">
 <style>
   .github-markdown {
@@ -32,6 +32,7 @@
 <body>
   <input type="checkbox" style="display: none" id="menu-control" />
   <main class="flex container">
+
     <aside class="book-menu fixed">
       <nav role="navigation">
 <h2 class="book-brand">
@@ -45,7 +46,7 @@
   
 
   <style>
-  nav ul a[href$="\2fgolang-tutorial\2fposts\2fhugoisforlovers\2f "] {
+  nav ul a[href$="\2fgolang-tutorial\2f docs\2f 03-1-%E5%8F%98%E9%87%8F\2f "] {
       color: #004ed0;
   }
   </style><ul>
@@ -130,106 +131,203 @@
 </nav>
     </aside>
 
-    <div class="book-posts">
+    <div class="book-page">
       <header class="align-center justify-between book-header">
   <label for="menu-control">
     <img src="/golang-tutorial/svg/menu.svg" />
   </label>
-  <strong>Getting Started with Hugo</strong>
+  <strong>03 1 变量</strong>
 </header>
 
-      <header>
-  <h1>Getting Started with Hugo</h1>
-  <h5>
-    <strong>Apr 2, 2014</strong>
-  </h5>
-</header>
-<article class="markdown">
+      
+<article class="github-markdown">
 
-<h2 id="step-1-install-hugo">Step 1. Install Hugo</h2>
-
-<p>Go to <a href="https://github.com/spf13/hugo/releases">Hugo releases</a> and download the
-appropriate version for your OS and architecture.</p>
-
-<p>Save it somewhere specific as we will be using it in the next step.</p>
-
-<p>More complete instructions are available at <a href="https://gohugo.io/getting-started/installing/">Install Hugo</a></p>
-
-<h2 id="step-2-build-the-docs">Step 2. Build the Docs</h2>
-
-<p>Hugo has its own example site which happens to also be the documentation site
-you are reading right now.</p>
-
-<p>Follow the following steps:</p>
+<h2 id="3种变量声明方式">3种变量声明方式</h2>
 
 <ol>
-<li>Clone the <a href="http://github.com/spf13/hugo">Hugo repository</a></li>
-<li>Go into the repo</li>
-<li>Run hugo in server mode and build the docs</li>
-<li>Open your browser to <a href="http://localhost:1313">http://localhost:1313</a></li>
+<li>无初始化, 指定变量类型</li>
+<li><code>var</code> 类型推断</li>
+<li>短变量声明 <code>:=</code></li>
 </ol>
 
-<p>Corresponding pseudo commands:</p>
+<p><strong>示例</strong></p>
 
-<pre><code>git clone https://github.com/spf13/hugo
-cd hugo
-/path/to/where/you/installed/hugo server --source=./docs
-&gt; 29 pages created
-&gt; 0 tags index created
-&gt; in 27 ms
-&gt; Web Server is available at http://localhost:1313
-&gt; Press ctrl+c to stop
+<pre><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+    // 1. 无初始化, 指定变量类型
+    var name string
+    var age int
+    fmt.Printf(&quot;%q %d\n&quot;, name, age)
+    // 输出结果
+    // &quot;&quot; 0
+
+    // 2. var 类型推断
+    var name2 = &quot;gopher2&quot;
+    fmt.Printf(&quot;%s\n&quot;, name2)
+    // 输出结果
+    // gopher2
+
+    // 3. 短变量声明 :=
+    name3 := &quot;gopher3&quot;
+    fmt.Printf(&quot;%s\n&quot;, name3)
+    // 输出结果
+    // gopher3
+}
 </code></pre>
 
-<p>Once you&rsquo;ve gotten here, follow along the rest of this page on your local build.</p>
+<h2 id="3种变量作用域">3种变量作用域</h2>
 
-<h2 id="step-3-change-the-docs-site">Step 3. Change the docs site</h2>
+<ul>
+<li>局部变量<br />
+作用域只在函数体内</li>
 
-<p>Stop the Hugo process by hitting Ctrl+C.</p>
+<li><p>全局变量<br />
+全局变量可以在整个包 &amp;&amp; 外部包（被导出后）使用
+&gt; 外部包引用，变量要大写</p>
 
-<p>Now we are going to run hugo again, but this time with hugo in watch mode.</p>
+<pre><code>import &quot;outside&quot;
+fmt.Printf(&quot;%s&quot;, outside.Name)
+</code></pre></li>
 
-<pre><code>/path/to/hugo/from/step/1/hugo server --source=./docs --watch
-&gt; 29 pages created
-&gt; 0 tags index created
-&gt; in 27 ms
-&gt; Web Server is available at http://localhost:1313
-&gt; Watching for changes in /Users/spf13/Code/hugo/docs/content
-&gt; Press ctrl+c to stop
+<li><p>形式参数</p></li>
+</ul>
+
+<p><strong>局部变量</strong></p>
+
+<pre><code>package main
+
+import &quot;fmt&quot;
+
+func main() {
+   /* 声明局部变量 */
+   var a, b, c int 
+
+   /* 初始化参数 */
+   a = 10
+   b = 20
+   c = a + b
+
+   fmt.Printf (&quot;结果： a = %d, b = %d and c = %d\n&quot;, a, b, c)
+}
 </code></pre>
 
-<p>Open your <a href="http://vim.spf13.com">favorite editor</a> and change one of the source
-content pages. How about changing this very file to <em>fix the typo</em>. How about changing this very file to <em>fix the typo</em>.</p>
+<p><strong>全局变量</strong></p>
 
-<p>Content files are found in <code>docs/content/</code>. Unless otherwise specified, files
-are located at the same relative location as the url, in our case
-<code>docs/content/overview/quickstart.md</code>.</p>
+<pre><code>package main
 
-<p>Change and save this file.. Notice what happened in your terminal.</p>
+import &quot;fmt&quot;
 
-<pre><code>&gt; Change detected, rebuilding site
+/* 声明全局变量 */
+var g int
 
-&gt; 29 pages created
-&gt; 0 tags index created
-&gt; in 26 ms
+func main() {
+
+   /* 声明局部变量 */
+   var a, b int
+
+   /* 初始化参数 */
+   a = 10
+   b = 20
+   g = a + b
+
+   fmt.Printf(&quot;结果： a = %d, b = %d and g = %d\n&quot;, a, b, g)
+}
 </code></pre>
 
-<p>Refresh the browser and observe that the typo is now fixed.</p>
+<p><strong>形式参数</strong></p>
 
-<p>Notice how quick that was. Try to refresh the site before it&rsquo;s finished building. I double dare you.
-Having nearly instant feedback enables you to have your creativity flow without waiting for long builds.</p>
+<p>形式参数会作为函数的局部变量来使用。实例如下：</p>
 
-<h2 id="step-4-have-fun">Step 4. Have fun</h2>
+<pre><code>package main
 
-<p>The best way to learn something is to play with it.</p>
+import &quot;fmt&quot;
+
+/* 声明全局变量 */
+var a int = 20;
+
+func main() {
+   /* main 函数中声明局部变量 */
+   var a int = 10
+   var b int = 20
+   var c int = 0
+
+   fmt.Printf(&quot;main()函数中 a = %d\n&quot;,  a);
+   c = sum( a, b);
+   fmt.Printf(&quot;main()函数中 c = %d\n&quot;,  c);
+}
+
+/* 函数定义-两数相加 */
+func sum(a, b int) int {
+   fmt.Printf(&quot;sum() 函数中 a = %d\n&quot;,  a);
+   fmt.Printf(&quot;sum() 函数中 b = %d\n&quot;,  b);
+
+   return a + b;
+}
+</code></pre>
 </article>
 
-    </div>
-  </main>
+      
+<div class="align-center book-git-footer justify-end">
   
+  
+  <div>
+    <a href="https://github.com/hopher/golang-tutorial/edit/master/content/docs/03-1-%e5%8f%98%e9%87%8f.md" target="_blank" rel="noopener">
+      <img src="/golang-tutorial/svg/code-fork.svg" /> Edit this page
+    </a>
+  </div>
+  
+</div>
+
+
+
+      
+      <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
+<script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<div id="gitalk-container"></div>
+<script>
+  var gitalk = new Gitalk({
+    clientID: '7dcb43fc92a2d46503f6',
+    clientSecret: 'e5bc998d14341e50ba879cf3af7a5c2133e787a9',
+    repo: 'golang-tutorial',
+    owner: 'hopher',
+    admin: ['hopher'],
+    id: location.pathname,      
+    distractionFreeMode: false  
+  })
+  gitalk.render('gitalk-container')  
+</script>
+            
+    </div>
+
+    
+  
+  
+  <aside class="book-toc fixed">
+    <nav id="TableOfContents">
+<ul>
+<li>
+<ul>
+<li><a href="#3种变量声明方式">3种变量声明方式</a></li>
+<li><a href="#3种变量作用域">3种变量作用域</a></li>
+</ul></li>
+</ul>
+</nav>
+  </aside>
+
+
+
+
+ 
+  </main>
 
   
   
+
+
+
 </body>
 
 </html>
