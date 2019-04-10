@@ -56,4 +56,16 @@ params:
     repo: golang-tutorial
     owner: hopher
     admin: hopher
-  
+
+# 多语言设置
+# https://gohugo.io/content-management/multilingual/ 
+DefaultContentLanguage: cn  
+languages:
+  cn:
+    #contentDir: content/cn
+    languageName: 中文  
+    weight: 1
+  en:
+    #contentDir: content/en
+    languageName: English
+    weight: 2
