@@ -43,7 +43,8 @@
       <pubDate>Tue, 09 Apr 2019 21:34:33 +0800</pubDate>
       
       <guid>https://hopher.github.io/golang-tutorial/docs/base/20190409213433/</guid>
-      <description></description>
+      <description> 两个内置函数 用于处理 Go 运行时的错误
+ panic 用于主动抛出错误 recover 用来捕获 panic 抛出的错误  </description>
     </item>
     
     <item>
