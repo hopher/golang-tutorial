@@ -23,7 +23,8 @@ headless: true
   - [递归函数]({{< relref "/docs/base/18-递归函数.md" >}})
   - [类型转换]({{< relref "/docs/base/19-类型转换.md" >}})
   - [错误处理]({{< relref "/docs/base/20-错误处理.md" >}})
-  - [并发]({{< relref "/docs/base/21-并发.md" >}})
+  - [接口]({{< relref "/docs/base/21-接口.md" >}})
+  - [并发]({{< relref "/docs/base/22-并发.md" >}})
 
 - **进阶知识**
   - [异常处理]({{< relref "/docs/99-xx.md" >}})
