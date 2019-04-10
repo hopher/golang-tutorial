@@ -18,7 +18,7 @@ headless: true
   - [指针]({{< relref "/docs/base/13-指针.md" >}})
   - [结构体]({{< relref "/docs/base/14-结构体.md" >}})
   - [切片(Slice)]({{< relref "/docs/base/15-切片.md" >}})
-  - [范围(Range)]({{< relref "/docs/base/16-范围.md" >}})
+  - [范围(Range)]({{< relref "/docs/base/16-范围(Range).md" >}})
   - [Map(集合)]({{< relref "/docs/base/17-Map.md" >}})
   - [递归函数]({{< relref "/docs/base/18-递归函数.md" >}})
   - [类型转换]({{< relref "/docs/base/19-类型转换.md" >}})
