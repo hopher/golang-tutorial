@@ -16,7 +16,7 @@
       <pubDate>Tue, 09 Apr 2019 21:38:06 +0800</pubDate>
       
       <guid>https://hopher.github.io/golang-tutorial/docs/20190409213806/</guid>
-      <description></description>
+      <description>中文</description>
     </item>
     
     <item>
@@ -38,12 +38,22 @@
     </item>
     
     <item>
+      <title>20-错误处理</title>
+      <link>https://hopher.github.io/golang-tutorial/docs/base/20190409213433/</link>
+      <pubDate>Tue, 09 Apr 2019 21:34:33 +0800</pubDate>
+      
+      <guid>https://hopher.github.io/golang-tutorial/docs/base/20190409213433/</guid>
+      <description></description>
+    </item>
+    
+    <item>
       <title>19-类型转换</title>
       <link>https://hopher.github.io/golang-tutorial/docs/base/20190409213425/</link>
       <pubDate>Tue, 09 Apr 2019 21:34:25 +0800</pubDate>
       
       <guid>https://hopher.github.io/golang-tutorial/docs/base/20190409213425/</guid>
-      <description></description>
+      <description>格式:
+type_name(expression)  type_name 为类型，expression 为表达式。</description>
     </item>
     
     <item>
@@ -61,11 +71,13 @@
       <pubDate>Tue, 09 Apr 2019 21:34:08 +0800</pubDate>
       
       <guid>https://hopher.github.io/golang-tutorial/docs/base/20190409213408/</guid>
-      <description></description>
+      <description>用hash表实现, 无序，无法决定它的返回顺序
+相关函数
+ delete()  </description>
     </item>
     
     <item>
-      <title>16-范围</title>
+      <title>16-范围(Range)</title>
       <link>https://hopher.github.io/golang-tutorial/docs/base/20190409213357/</link>
       <pubDate>Tue, 09 Apr 2019 21:33:57 +0800</pubDate>
       
@@ -81,7 +93,9 @@
       <guid>https://hopher.github.io/golang-tutorial/docs/base/20190409213349/</guid>
       <description>切片 切片扩容时，会重新建立新的底层数组，内存重新分配内存储存空间, 然后把旧的数据复制到新的数组里, 时间复杂度O(n) 切片长度 &amp;gt;= 1024时, 以1.25倍进行扩容, 小于1024时则2倍扩容
 golang 官方文档在关于 slice 的 append 一节有说明： &amp;gt; If the capacity of s is not large enough to fit the additional values, append allocates a new, sufficiently large underlying array that fits both the existing slice elements and the additional values. Otherwise, append re-uses the underlying array.
-也就是说，如果原来的底层数组足够大，能放的下 append 的数据，就不会新建底层数组。而如果不够的话，则会分配一个新的数组。也因此是 O(n) 的时间复杂度</description>
+也就是说，如果原来的底层数组足够大，能放的下 append 的数据，就不会新建底层数组。而如果不够的话，则会分配一个新的数组。也因此是 O(n) 的时间复杂度
+切片 vs 数组 声明时，数组指定长度大小, 切片没有
+var balance = [5]float32{1000.0, 2.</description>
     </item>
     
     <item>
@@ -90,7 +104,8 @@ golang 官方文档在关于 slice 的 append 一节有说明： &amp;gt; If the
       <pubDate>Tue, 09 Apr 2019 21:33:40 +0800</pubDate>
       
       <guid>https://hopher.github.io/golang-tutorial/docs/base/20190409213340/</guid>
-      <description> 结构体 </description>
+      <description> 结构体 格式:
+type Book struct { title string author string }  </description>
     </item>
     
     <item>
@@ -99,11 +114,13 @@ golang 官方文档在关于 slice 的 append 一节有说明： &amp;gt; If the
       <pubDate>Tue, 09 Apr 2019 21:33:29 +0800</pubDate>
       
       <guid>https://hopher.github.io/golang-tutorial/docs/base/20190409213329/</guid>
-      <description> 指针 指针，返回的是内存地址空间 (十六进制)
+      <description>指针 指针，返回的是内存地址空间 (十六进制)
 格式：0xc000070010, 开头的“0”令解析器更易辨认数，而“x”则代表十六进制
  二进制 数据在计算机中的表示，最终是以二进制的形式存在 - 优点：更直观地解决 - 缺点：太长，不容易思考，可以用更短的16进制表示
  指针一般用 ptr 表示
-package main import &amp;quot;fmt&amp;quot; func main() { var a int = 10 fmt.Printf(&amp;quot;变量的地址: %v\n&amp;quot;, &amp;amp;a ) fmt.Printf(&amp;quot;变量的地址: %#x\n&amp;quot;, &amp;amp;a ) }  </description>
+package main import &amp;quot;fmt&amp;quot; func main() { var a int = 10 fmt.Printf(&amp;quot;变量的地址: %v\n&amp;quot;, &amp;amp;a ) fmt.Printf(&amp;quot;变量的地址: %#x\n&amp;quot;, &amp;amp;a ) }  值方法 vs 指针方法区别
+golang隐式传递指针，但是不隐式定义指针
+func printBook( book *Books ) { fmt.Printf( &amp;quot;Book title : %s\n&amp;quot;, book.title); fmt.Printf( &amp;quot;Book author : %s\n&amp;quot;, book.author); fmt.Printf( &amp;quot;Book subject : %s\n&amp;quot;, book.subject); fmt.Printf( &amp;quot;Book book_id : %d\n&amp;quot;, book.</description>
     </item>
     
     <item>

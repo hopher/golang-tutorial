@@ -68,11 +68,12 @@
 <li><a href="/golang-tutorial/docs/base/20190409213329/">指针</a></li>
 <li><a href="/golang-tutorial/docs/base/20190409213340/">结构体</a></li>
 <li><a href="/golang-tutorial/docs/base/20190409213349/">切片(Slice)</a></li>
-<li><a href="/golang-tutorial/docs/base/20190409213357/">范围(Range)</a></li>
+<li><a href="">范围(Range)</a></li>
 <li><a href="/golang-tutorial/docs/base/20190409213408/">Map(集合)</a></li>
 <li><a href="/golang-tutorial/docs/base/20190409213416/">递归函数</a></li>
 <li><a href="/golang-tutorial/docs/base/20190409213425/">类型转换</a></li>
 <li><a href="/golang-tutorial/docs/base/20190409213433/">错误处理</a></li>
+<li><a href="/golang-tutorial/docs/base/20190409213433/">接口</a></li>
 <li><a href="/golang-tutorial/docs/base/20190409213444/">并发</a></li>
 </ul></li>
 
@@ -139,6 +140,23 @@
 &gt; If the capacity of s is not large enough to fit the additional values, append allocates a new, sufficiently large underlying array that fits both the existing slice elements and the additional values. Otherwise, append re-uses the underlying array.</p>
 
 <p>也就是说，如果原来的底层数组足够大，能放的下 append 的数据，就不会新建底层数组。而如果不够的话，则会分配一个新的数组。也因此是 O(n) 的时间复杂度</p>
+
+<h2 id="切片-vs-数组">切片 vs 数组</h2>
+
+<p>声明时，数组指定长度大小, 切片没有</p>
+
+<pre><code>var balance = [5]float32{1000.0, 2.0, 3.4, 7.0, 50.0} // 数组
+var balance = [...]float32{1000.0, 2.0, 3.4, 7.0, 50.0} // 数组
+
+var balance = []float32{1000.0, 2.0, 3.4, 7.0, 50.0}  // 切片
+</code></pre>
+
+<h2 id="相关函数">相关函数</h2>
+
+<ul>
+<li>len() 获取切片长度</li>
+<li>cap() 获取切片容量</li>
+</ul>
 </article>
 
       
@@ -166,7 +184,7 @@
     repo: 'golang-tutorial',
     owner: 'hopher',
     admin: ['hopher'],
-    id: location.pathname,      
+    id: '20190409213349',          
     distractionFreeMode: false  
   })
   gitalk.render('gitalk-container')  
@@ -180,7 +198,11 @@
   <aside class="book-toc fixed">
     <nav id="TableOfContents">
 <ul>
-<li><a href="#切片">切片</a></li>
+<li><a href="#切片">切片</a>
+<ul>
+<li><a href="#切片-vs-数组">切片 vs 数组</a></li>
+<li><a href="#相关函数">相关函数</a></li>
+</ul></li>
 </ul>
 </nav>
   </aside>
