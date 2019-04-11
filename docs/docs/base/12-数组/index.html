@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>12 数组 | Golang Tutorial</title>
+<title>12-数组 | Golang Tutorial</title>
 
 <link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
 <link rel="stylesheet" href="/golang-tutorial/normalize.min.css">
@@ -66,33 +66,35 @@
 <li><a href="/golang-tutorial/docs/base/11-%E5%8F%98%E9%87%8F%E4%BD%9C%E7%94%A8%E5%9F%9F/">变量作用域</a></li>
 <li><a href="/golang-tutorial/docs/base/12-%E6%95%B0%E7%BB%84/">数组</a></li>
 <li><a href="/golang-tutorial/docs/base/13-%E6%8C%87%E9%92%88/">指针</a></li>
-<li><a href="/golang-tutorial/docs/base/14-%E5%88%87%E7%89%87/">切片(Slice)</a></li>
-<li><a href="/golang-tutorial/docs/base/15-%E8%8C%83%E5%9B%B4/">范围(Range)</a></li>
-<li><a href="/golang-tutorial/docs/base/16-Map/">Map(集合)</a></li>
-<li><a href="/golang-tutorial/docs/base/17-%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0/">递归函数</a></li>
-<li><a href="/golang-tutorial/docs/base/18-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/">类型转换</a></li>
-<li><a href="/golang-tutorial/docs/base/19-%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86/">错误处理</a></li>
-<li><a href="/golang-tutorial/docs/base/20-%E5%B9%B6%E5%8F%91/">并发</a></li>
+<li><a href="/golang-tutorial/docs/base/14-%E7%BB%93%E6%9E%84%E4%BD%93/">结构体</a></li>
+<li><a href="/golang-tutorial/docs/base/15-%E5%88%87%E7%89%87/">切片(Slice)</a></li>
+<li><a href="/golang-tutorial/docs/base/16-%E8%8C%83%E5%9B%B4Range/">范围(Range)</a></li>
+<li><a href="/golang-tutorial/docs/base/17-Map/">Map(集合)</a></li>
+<li><a href="/golang-tutorial/docs/base/18-%E9%80%92%E5%BD%92%E5%87%BD%E6%95%B0/">递归函数</a></li>
+<li><a href="/golang-tutorial/docs/base/19-%E7%B1%BB%E5%9E%8B%E8%BD%AC%E6%8D%A2/">类型转换</a></li>
+<li><a href="/golang-tutorial/docs/base/20-%E6%8E%A5%E5%8F%A3/">接口</a></li>
+<li><a href="/golang-tutorial/docs/base/21-%E9%94%99%E8%AF%AF%E5%A4%84%E7%90%86/">错误处理</a></li>
+<li><a href="/golang-tutorial/docs/base/22-%E5%B9%B6%E5%8F%91/">并发</a></li>
 </ul></li>
 
 <li><p><strong>进阶知识</strong></p>
 
 <ul>
-<li><a href="/golang-tutorial/docs/99-xx/">异常处理</a></li>
-<li><a href="/golang-tutorial/docs/99-xx/">程序测试</a></li>
+<li><a href="/golang-tutorial/docs/20190409213806/">异常处理</a></li>
+<li><a href="/golang-tutorial/docs/20190409213806/">程序测试</a></li>
 </ul></li>
 
 <li><p><strong>并发编程</strong></p>
 
 <ul>
-<li><a href="/golang-tutorial/docs/99-xx/">goroutine</a></li>
-<li><a href="/golang-tutorial/docs/99-xx/">通道channel</a></li>
+<li><a href="/golang-tutorial/docs/20190409213806/">goroutine</a></li>
+<li><a href="/golang-tutorial/docs/20190409213806/">通道channel</a></li>
 </ul></li>
 
 <li><p><strong>程序性能分析</strong></p>
 
 <ul>
-<li><a href="/golang-tutorial/docs/99-xx/">CPU &amp;&amp; 内存</a></li>
+<li><a href="/golang-tutorial/docs/20190409213806/">CPU &amp;&amp; 内存</a></li>
 </ul></li>
 
 <li><p><strong>附录</strong></p>
@@ -123,7 +125,7 @@
   <label for="menu-control">
     <img src="/golang-tutorial/svg/menu.svg" />
   </label>
-  <strong>12 数组</strong>
+  <strong>12-数组</strong>
 </header>
 
       
@@ -180,7 +182,7 @@ func main() {
   
   
   <div>
-    <a href="https://github.com/hopher/golang-tutorial/edit/master/content/docs/base/12-%e6%95%b0%e7%bb%84.md" target="_blank" rel="noopener">
+    <a href="https://github.com/hopher/golang-tutorial/edit/master/content/docs/base/12-%e6%95%b0%e7%bb%84/index.md" target="_blank" rel="noopener">
       <img src="/golang-tutorial/svg/code-fork.svg" /> Edit this page
     </a>
   </div>
@@ -200,7 +202,7 @@ func main() {
     repo: 'golang-tutorial',
     owner: 'hopher',
     admin: ['hopher'],
-    id: location.pathname,      
+    id: location.pathname,          
     distractionFreeMode: false  
   })
   gitalk.render('gitalk-container')  
