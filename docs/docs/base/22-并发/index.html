@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>21-并发 | Golang Tutorial</title>
+<title>21-并发 | Golang 教程</title>
 
 <link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
 <link rel="stylesheet" href="/golang-tutorial/normalize.min.css">
@@ -36,7 +36,7 @@
     <aside class="book-menu fixed">
       <nav role="navigation">
 <h2 class="book-brand">
-  <a href="https://hopher.github.io/golang-tutorial/">Golang Tutorial</a>
+  <a href="https://hopher.github.io/golang-tutorial/">Golang 教程</a>
 </h2>
 
 
@@ -91,6 +91,12 @@
 <li><a href="/golang-tutorial/docs/20190409213806/">通道channel</a></li>
 </ul></li>
 
+<li><p><strong>网络相关</strong></p>
+
+<ul>
+<li><a href="/golang-tutorial/docs/20190409213806/">tcp/ip服务</a></li>
+</ul></li>
+
 <li><p><strong>程序性能分析</strong></p>
 
 <ul>
@@ -136,6 +142,7 @@
 <ul>
 <li>goroutine</li>
 <li>channel</li>
+<li>close(ch1) 关闭通道</li>
 </ul>
 
 <h2 id="goroutine">goroutine</h2>
@@ -150,12 +157,71 @@ go f(x, y, z)
 
 <h2 id="channel">channel</h2>
 
+<p>通道相关操作：初始化、发送、接收和关闭</p>
+
 <blockquote>
 <p>Don’t communicate by sharing memory; share memory by communicating.<br />
 （不要通过共享内存来通信，而应该通过通信来共享内存。）</p>
 </blockquote>
 
-<p><img src="1.png" alt="img" /></p>
+<p>channel 相当于先进先出（FIFO）的队列</p>
+
+<p>发送方：
+元素值从通道进入外界时会被移动。这个移动操作实际上包含了两步，
+- 第一步是生成正在通道中的这个元素值的副本，并准备给到接收方，
+- 第二步是删除在通道中的这个元素值。</p>
+
+<p>接收方：
+接收操作通常包含了“复制通道内的元素值”“放置副本到接收方”“删掉原值”三个步骤。</p>
+
+<p><strong>分类</strong></p>
+
+<ul>
+<li>单向通道</li>
+
+<li><p>双向通道</p>
+
+<pre><code>var uselessChan = make(chan&lt;- int, 1)
+</code></pre></li>
+</ul>
+
+<p>单向通道作用:</p>
+
+<p>单向通道最主要的用途就是约束其他代码的行为。</p>
+
+<p><strong>注意</strong>
+对于值为<code>nil</code>的通道，不论它的具体类型是什么，对它的发送操作和接收操作都会永久地处于阻塞状态。它们所属的 goroutine 中的任何代码，都不再会被执行。</p>
+
+<p>注意，由于通道类型是引用类型，所以它的零值就是nil。换句话说，当我们只声明该类型的变量但没有用make函数对它进行初始时，该变量的值就会是<code>nil</code>。我们一定不要忘记初始化通道！</p>
+
+<p>示例3</p>
+
+<pre><code>var ch3 chan int
+//ch3 &lt;- 1 // 通道的值为nil，因此这里会造成永久的阻塞！
+//&lt;-ch3 // 通道的值为nil，因此这里会造成永久的阻塞！
+_ = ch3
+</code></pre>
+
+<p><strong>总结</strong><br />
+今天我们讲到了通道的一些常规操作，包括初始化、发送、接收和关闭。通道类型是 Go 语言特有的，所以你一开始肯定会感到陌生，其中的一些规则和奥妙还需要你铭记于心，并细心体会。
+首先是在初始化通道时设定其容量的意义，这有时会让通道拥有不同的行为模式。对通道的发送操作和接收操作都有哪些基本特性，也是我们必须清楚的。 这涉及了它们什么时候会互斥，什么时候会造成阻塞，什么时候会引起 panic，以及它们收发元素值的顺序是怎样的，它们是怎样保证元素值的完整性的，元素值通常会被复制几次，等等。
+最后别忘了，通道也是 Go 语言的并发编程模式中重要的一员。</p>
+
+<p>select 执行 case 顺序：</p>
+
+<p>会先执行每一个case，最后采用wei随机算法，分配相关case, 通过break 结束case通道（要注意for情况）</p>
+
+<p>思考题：</p>
+
+<p><a href="https://time.geekbang.org/column/article/14664?utm_source=weibo&amp;utm_medium=xuxiaoping&amp;utm_campaign=promotion&amp;utm_content=columns">https://time.geekbang.org/column/article/14664?utm_source=weibo&amp;utm_medium=xuxiaoping&amp;utm_campaign=promotion&amp;utm_content=columns</a>
+如果在select语句中发现某个通道已关闭，那么应该怎样屏蔽掉它所在的分支？ 在select语句与for语句联用时，怎样直接退出外层的for语句？</p>
+
+<ol>
+<li>如果在select语句中发现某个通道已关闭，那么应该怎样屏蔽掉它所在的分支？
+答：很简单，把nil赋给代表了这个通道的变量就可以了。如此一来，对于这个通道（那个变量）的发送操作和接收操作就会永远被阻塞。</li>
+<li>在select语句与for语句联用时，怎样直接退出外层的for语句？
+答：这一般会用到goto语句和标签（label），具体请参看 Go 语言规范的这部分。</li>
+</ol>
 </article>
 
       
@@ -175,6 +241,7 @@ go f(x, y, z)
       
       <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="https://hopher.github.io/golang-tutorial//js/md5.min.js"></script>
 <div id="gitalk-container"></div>
 <script>
   var gitalk = new Gitalk({
@@ -183,7 +250,7 @@ go f(x, y, z)
     repo: 'golang-tutorial',
     owner: 'hopher',
     admin: ['hopher'],
-    id: location.pathname,          
+    id: md5(location.pathname),          
     distractionFreeMode: false  
   })
   gitalk.render('gitalk-container')  

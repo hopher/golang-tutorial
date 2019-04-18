@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes" ?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Introduction on Golang Tutorial</title>
+    <title>Introduction on Golang 教程</title>
     <link>https://hopher.github.io/golang-tutorial/</link>
-    <description>Recent content in Introduction on Golang Tutorial</description>
+    <description>Recent content in Introduction on Golang 教程</description>
     <generator>Hugo -- gohugo.io</generator>
     <lastBuildDate>Tue, 09 Apr 2019 12:21:35 +0800</lastBuildDate>
     
@@ -25,11 +25,22 @@
       <pubDate>Tue, 09 Apr 2019 21:34:44 +0800</pubDate>
       
       <guid>https://hopher.github.io/golang-tutorial/docs/base/22-%E5%B9%B6%E5%8F%91/</guid>
-      <description> 知识列表  goroutine channel  goroutine goroutine 是轻量级线程，goroutine 的调度是由 Golang 运行时进行管理的。
+      <description>知识列表  goroutine channel close(ch1) 关闭通道  goroutine goroutine 是轻量级线程，goroutine 的调度是由 Golang 运行时进行管理的。
 语法格式
-go 函数名( 参数列表 ) go f(x, y, z)  channel  Don’t communicate by sharing memory; share memory by communicating.
+go 函数名( 参数列表 ) go f(x, y, z)  channel 通道相关操作：初始化、发送、接收和关闭
+ Don’t communicate by sharing memory; share memory by communicating.
 （不要通过共享内存来通信，而应该通过通信来共享内存。）
- </description>
+ channel 相当于先进先出（FIFO）的队列
+发送方： 元素值从通道进入外界时会被移动。这个移动操作实际上包含了两步， - 第一步是生成正在通道中的这个元素值的副本，并准备给到接收方， - 第二步是删除在通道中的这个元素值。
+接收方： 接收操作通常包含了“复制通道内的元素值”“放置副本到接收方”“删掉原值”三个步骤。
+分类
+ 单向通道 双向通道
+var uselessChan = make(chan&amp;lt;- int, 1)   单向通道作用:
+单向通道最主要的用途就是约束其他代码的行为。
+注意 对于值为nil的通道，不论它的具体类型是什么，对它的发送操作和接收操作都会永久地处于阻塞状态。它们所属的 goroutine 中的任何代码，都不再会被执行。
+注意，由于通道类型是引用类型，所以它的零值就是nil。换句话说，当我们只声明该类型的变量但没有用make函数对它进行初始时，该变量的值就会是nil。我们一定不要忘记初始化通道！
+示例3
+var ch3 chan int //ch3 &amp;lt;- 1 // 通道的值为nil，因此这里会造成永久的阻塞！ //&amp;lt;-ch3 // 通道的值为nil，因此这里会造成永久的阻塞！ _ = ch3  总结</description>
     </item>
     
     <item>

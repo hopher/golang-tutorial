@@ -3,7 +3,7 @@
 <head>
   <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-<title>14-结构体 | Golang Tutorial</title>
+<title>14-结构体 | Golang 教程</title>
 
 <link href="https://fonts.googleapis.com/css?family=Oxygen|Oxygen+Mono:300,400,700" rel="stylesheet">
 <link rel="stylesheet" href="/golang-tutorial/normalize.min.css">
@@ -36,7 +36,7 @@
     <aside class="book-menu fixed">
       <nav role="navigation">
 <h2 class="book-brand">
-  <a href="https://hopher.github.io/golang-tutorial/">Golang Tutorial</a>
+  <a href="https://hopher.github.io/golang-tutorial/">Golang 教程</a>
 </h2>
 
 
@@ -89,6 +89,12 @@
 <ul>
 <li><a href="/golang-tutorial/docs/20190409213806/">goroutine</a></li>
 <li><a href="/golang-tutorial/docs/20190409213806/">通道channel</a></li>
+</ul></li>
+
+<li><p><strong>网络相关</strong></p>
+
+<ul>
+<li><a href="/golang-tutorial/docs/20190409213806/">tcp/ip服务</a></li>
 </ul></li>
 
 <li><p><strong>程序性能分析</strong></p>
@@ -159,6 +165,7 @@
       
       <link rel="stylesheet" href="https://unpkg.com/gitalk/dist/gitalk.css">
 <script src="https://unpkg.com/gitalk/dist/gitalk.min.js"></script>
+<script src="https://hopher.github.io/golang-tutorial//js/md5.min.js"></script>
 <div id="gitalk-container"></div>
 <script>
   var gitalk = new Gitalk({
@@ -167,7 +174,7 @@
     repo: 'golang-tutorial',
     owner: 'hopher',
     admin: ['hopher'],
-    id: location.pathname,          
+    id: md5(location.pathname),          
     distractionFreeMode: false  
   })
   gitalk.render('gitalk-container')  
